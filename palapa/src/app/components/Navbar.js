@@ -1,51 +1,62 @@
 "use client";
-import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/Logo.png";
+import { FiHome, FiInfo, FiShoppingBag, FiPhone } from "react-icons/fi"; // Ikon dari react-icons
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full flex justify-between items-center px-14 bg-white">
-
-      {/* Logo */}
-      <div className="text-xl font-bold flex items-center">
-        <Image src={Logo} className="navLogo" width={100} height={100} alt="Palapa" />
-      </div>
-
-      {/* Navbar Links */}
-      <div className="flex items-center space-x-10">
-        <Link href="/" className="border-2 border-blue-500 text-gray-700 text-center py-1 px-6
-               rounded-tl-[10px] rounded-tr-[30px] 
-               rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500">
-          Beranda
-        </Link>
-        <Link href="/about" className="text-gray-700 hover:text-blue-500">Tentang Kami</Link>
-        <Link href="/history" className="text-gray-700 hover:text-blue-500">Produk Kami</Link>
-        <Link href="/history" className="text-gray-700 hover:text-blue-500">Partner Kami</Link>
-
-        {/* Our Services Dropdown */}
-        <div className="relative">
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="bg-[#002453] text-white px-4 py-2 rounded-md flex items-center"
-          >
-            Hubungi Kami ▼
-          </button>
-          {dropdownOpen && (
-            <div className="absolute right-0 mt-1 text-white bg-[#002453] shadow-lg rounded-md py-2 min-w-[300px]">
-              <Link href="/services/visi-misi" className="block px-4 py-2 hover:bg-blue-700">Kelebihan Kami</Link>
-              <Link href="/services/stories" className="block px-4 py-2 hover:bg-blue-700">Kerja sama dan Pengembangan</Link>
-              <Link href="/services/products" className="block px-4 py-2 hover:bg-blue-700">Nilai-Nilai Perusahaan</Link>
-              <Link href="/contact" className="block px-4 py-2 hover:bg-blue-700">Hubungi Kami</Link>
-            </div>
-          )}
+  <>  
+    <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-8 py-2 bg-white hidden md:flex">
+    {/* Konten Navbar */}
+        {/* Logo */}
+        <div className="text-md font-bold flex items-center">
+          <Image src={Logo} className="navLogo" width={80} height={80} alt="Palapa" />
         </div>
-      </div>
 
-    </nav>
+        {/* Navbar Links */}
+        <div className="flex items-center space-x-1 md:space-x-5 lg:space-x-14 text-sm md:text-xs lg:text-md xl:text-[18px]">
+          <Link href="#heroSection" className="border-2 border-blue-500 text-gray-700 text-center py-1 px-6
+                rounded-tl-[10px] rounded-tr-[30px] 
+                rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500">
+            Beranda
+          </Link>
+          <Link href="#aboutSection" className="text-gray-700 hover:text-blue-500">Tentang Kami</Link>
+          <Link href="#productSection" className="text-gray-700 hover:text-blue-500">Produk</Link>
+          <Link href="#partnerSection" className="text-gray-700 hover:text-blue-500">Partner</Link>
+
+          {/* Our Services Dropdown */}
+          <div className="relative">
+            <Link href="#contactSection"
+              className="bg-blue-500 text-white px-6 py-3 rounded-lg flex items-center hover:text-gray-200"
+            >
+              Hubungi Kami
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-t-md py-2 flex justify-around items-center z-50 border-t">
+        <a href="#" className="flex flex-col items-center text-blue-600">
+          <FiHome className="text-2xl" />
+          <span className="text-xs">Beranda</span>
+        </a>
+        <a href="#aboutSection" className="flex flex-col items-center text-gray-600 hover:text-blue-600">
+          <FiInfo className="text-2xl" />
+          <span className="text-xs">Tentang</span>
+        </a>
+        <a href="#productSection" className="flex flex-col items-center text-gray-600 hover:text-blue-600">
+          <FiShoppingBag className="text-2xl" />
+          <span className="text-xs">Produk</span>
+        </a>
+        <a href="#contactSection" className="flex flex-col items-center text-gray-600 hover:text-blue-600">
+          <FiPhone className="text-2xl" />
+          <span className="text-xs">Hubungi</span>
+        </a>
+      </nav>
+    </>
   );
 };
 
