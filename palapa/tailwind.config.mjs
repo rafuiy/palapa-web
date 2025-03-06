@@ -19,12 +19,19 @@ module.exports = {
 
         keyframes: {
           marquee: {
-            "0%": { transform: "translateX(0)" },
-            "100%": { transform: "translateX(-50%)" }, // Hanya -50% karena ada duplikasi
+            "0%": { transform: "translateX(100%)" },
+            "100%": { transform: "translateX(-200%)" }, // Hanya -50% karena ada duplikasi
           },
+
+          marqus: {
+            "0%": { transform: "translateX(100%)" },
+            "0%": { transform: "translateX(-200%)" }, // Hanya -50% karena ada duplikasi
+          },
+          
         },
         animation: {
-          marquee: "marquee 10s linear infinite", // Ubah durasi sesuai kebutuhan
+          marquee: "marquee 25s linear infinite",
+          marqus: "marqus 25s linear infinite", // Ubah durasi sesuai kebutuhan
         },
 
 

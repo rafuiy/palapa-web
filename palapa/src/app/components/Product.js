@@ -42,7 +42,7 @@ export default function CardCarousel({ setActiveModal }) {
         {cards.map((card, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white shadow-lg rounded-lg p-4">
-              <Image src={card.image} alt={card.title} className="w-full h-32 p-5 object-contain shadow-md rounded-md" />
+              <Image src={card.image} alt={card.title} className="w-full h-32 p-5 object-contain shadow-[30px_0px_50px_rgba(80,110,255,0.3)] rounded-md" />
               <h2 className="mt-4 text-lg font-bold">{card.title}</h2>
               <p className="text-gray-600 text-sm">{card.description}</p>
               <button 

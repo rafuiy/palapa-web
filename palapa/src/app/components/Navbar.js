@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
   <>  
-    <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-8 py-2 bg-white hidden md:flex">
+    <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-8 py-2 xl:py-1 bg-white hidden md:flex">
     {/* Konten Navbar */}
         {/* Logo */}
         <div className="text-md font-bold flex items-center">
@@ -17,20 +17,20 @@ const Navbar = () => {
         </div>
 
         {/* Navbar Links */}
-        <div className="flex items-center space-x-1 md:space-x-5 lg:space-x-14 text-sm md:text-xs lg:text-md xl:text-[18px]">
-          <Link href="#heroSection" className="border-2 border-blue-500 text-gray-700 text-center py-1 px-6
+        <div className="flex items-center space-x-2 md:space-x-5 lg:space-x-14 text-sm md:text-xs lg:text-md xl:text-[15px] font-normal">
+          <Link href="#heroSection" className="border-2 border-blue-500 text-[#002453] text-center py-2 md:py-1 px-6
                 rounded-tl-[10px] rounded-tr-[30px] 
                 rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500">
             Beranda
           </Link>
-          <Link href="#aboutSection" className="text-gray-700 hover:text-blue-500">Tentang Kami</Link>
-          <Link href="#productSection" className="text-gray-700 hover:text-blue-500">Produk</Link>
-          <Link href="#partnerSection" className="text-gray-700 hover:text-blue-500">Partner</Link>
+          <Link href="#aboutSection" className="text-[#002453] hover:text-blue-500">Tentang Kami</Link>
+          <Link href="#productSection" className="text-[#002453] hover:text-blue-500">Produk</Link>
+          <Link href="#partnerSection" className="text-[#002453] hover:text-blue-500">Partner</Link>
 
           {/* Our Services Dropdown */}
           <div className="relative">
             <Link href="#contactSection"
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg flex items-center hover:text-gray-200"
+              className="bg-blue-500 text-white font-normal px-6 py-2 rounded-lg flex items-center hover:text-gray-200"
             >
               Hubungi Kami
             </Link>

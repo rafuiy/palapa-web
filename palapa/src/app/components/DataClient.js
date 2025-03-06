@@ -1,8 +1,18 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
 export default function DataClient() {
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const dropdownRef = useRef(null); // Ref untuk mendeteksi klik di dalam dropdown
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
+  const [isAnimating, setIsAnimating] = useState(true); // State untuk mengontrol animasi
+
+  const toggleMarquee = () => {
+    setIsAnimating((prev) => !prev);
+  };
+
+  
 
   const cityData = {
     "Lapas Aceh": ["LPKA Banda Aceh", "Lapas Kelas IIA Lhokseumawe", "Lapas Banda Aceh"],
@@ -103,55 +113,101 @@ export default function DataClient() {
     "Lapas Sulawesi Tenggara": ["Lapas Kelas IIA Kendari", "Lapas Kelas IIB Baubau", "Lapas Kelas IIB Kolaka"],
     "Lapas Maluku": ["Lapas Kelas IIA Ambon", "Lapas Kelas IIB Tual", "Lapas Kelas IIB Masohi"],
   };
-  
-  
-  
 
-  // Menutup dropdown saat klik di luar, tetapi tetap terbuka saat klik di dalam
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
         setActiveDropdown(null);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  const toggleDropdown = (button) => {
+  const toggleDropdown = (button, event) => {
+    const rect = event.target.getBoundingClientRect();
+    setDropdownPosition({ top: rect.bottom + window.scrollY, left: rect.left });
     setActiveDropdown(activeDropdown === button ? null : button);
+
+    // Hentikan marquee saat dropdown dibuka
+    setIsAnimating(false);
   };
 
   return (
-    <div className="w-full overflow-hidden whitespace-nowrap relative">
-      <div className="flex space-x-10">
+    <div className="w-full overflow-hidden whitespace-nowrap relative flex flex-col justify-center gap-5">
+      <div className="flex space-x-10 animate-marqus">
         {Object.keys(cityData).map((button, i) => (
-          <div key={i} className="relative" ref={dropdownRef}>
+          <div key={i} className="relative">
             <button
-              className="px-6 py-2 text-lg font-bold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition"
-              onClick={() => toggleDropdown(button)}
+              ref={buttonRef}
+              className="px-6 py-1 text-[10px] md:text-base lg:text-sm font-bold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition"
+              onClick={(e) => {
+                toggleMarquee(); // Panggil fungsi untuk mengontrol marquee
+                toggleDropdown(button, e); // Panggil fungsi untuk menampilkan dropdown
+              }}
+              
             >
               {button}
             </button>
-
-            {/* Dropdown */}
-            {activeDropdown === button && (
-              <div className="mt-2 w-auto bg-white border border-gray-300 rounded-lg shadow-md">
-                {cityData[button].map((city, index) => (
-                  <p
-                    key={index}
-                    className="px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer"
-                  >
-                    {city}
-                  </p>
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>
+
+      {/* Render dropdown di luar parent menggunakan portal */}
+      {activeDropdown &&
+        createPortal(
+          <div
+            ref={dropdownRef}
+            className="absolute w-max mt-2 bg-white border border-gray-300 rounded-lg shadow-md z-50"
+            style={{ top: dropdownPosition.top, left: dropdownPosition.left }}
+          >
+            {cityData[activeDropdown].map((city, index) => (
+              <p key={index} className="px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
+                {city}
+              </p>
+            ))}
+          </div>,
+          document.body
+        )}
+
+<div className="flex space-x-10 animate-marquee md:hidden">
+        {Object.keys(cityData).map((button, i) => (
+          <div key={i} className="relative">
+            <button
+              ref={buttonRef}
+              className="px-6 py-1 text-[10px] md:text-base lg:text-sm font-bold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition"
+              onClick={(e) => toggleDropdown(button, e)}
+            >
+              {button}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Render dropdown di luar parent menggunakan portal */}
+      {activeDropdown &&
+        createPortal(
+          <div
+            ref={dropdownRef}
+            className="absolute w-max mt-2 bg-white border border-gray-300 rounded-lg shadow-md z-50"
+            style={{ top: dropdownPosition.top, left: dropdownPosition.left }}
+          >
+            {cityData[activeDropdown].map((city, index) => (
+              <p key={index} className="px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
+                {city}
+              </p>
+            ))}
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
