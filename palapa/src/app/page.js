@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* ABOUT US */}
       <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 xl:mt-36 pt-16 px-5 w-full">
-        <h1 className="flex text-xl md:text-2xl xl:text-4xl font-bold mt-10 md:mt-10 lg:mt-20 xl:mt-40 justify-center">Tentang Kami</h1>
+        <h1 className="flex text-xl md:text-2xl xl:text-3xl font-bold mt-10 md:mt-10 lg:mt-20 xl:mt-40 justify-center">Tentang Kami</h1>
         <div className="flex flex-row gap-8 mt-5 md:mt-8 xl:mt-12 text-lg items-start justify-center">
           <div className="flex-none w-8 xl:w-10 h-8 xl:h-10 flex mt-4 lg:mt-6 items-center justify-center rounded-full bg-[#E4EEFF] ring-8 ring-blue-100 backdrop-blur-lg hidden md:flex">
               <PiRocketLaunch className="text-blue-400 w-5 xl:w-6 h-4 xl:h-5 items-center" />
@@ -98,7 +98,7 @@ export default function Home() {
               dalam menyediakan solusi telekomunikasi yang aman, legal, dan terintegrasi.</p>
               <button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-blue-500 text-white p-3 xl:p-2 text-[10px] xl:text-[15px] rounded-xl w-[30%] sm:w-[30%] md:w-[15%] lg:w-[13%] mt-5 md:mt-8 lg:mt-10 xl:mt-12 text-center py-1"
+              className="bg-blue-500 text-white p-3 xl:p-2 text-[10px] xl:text-[15px] rounded-xl w-[30%] sm:w-[30%] md:w-[15%] lg:w-[13%] xl:w-[12%] mt-5 md:mt-8 lg:mt-10 xl:mt-12 text-center py-1"
               >
             Selengkapnya
               </button>
@@ -111,30 +111,30 @@ export default function Home() {
       {/* VISION & MISSION */}
       <div className="px-3 md:px-6 xl:px-10 w-full bg-[#F5F5F5]">
         <div className="VISI flex flex-col gap-3 sm:gap-3 md:gap-10 mt-10 py-10">
-          <h1 className="text-2xl md:text-2xl xl:text-4xl font-bold ">Visi Kami</h1>
+          <h1 className="text-2xl md:text-2xl xl:text-3xl font-bold ">Visi Kami</h1>
           <p className="text-xs md:text-md lg:text-lg xl:text-lg md:w-[80%] lg:w-3/4"><strong>Palapa Teknologi</strong> memiliki visi untuk menjadi penyedia layanan telekomunikasi dan Informasi handal
           dan terpercaya dengan kinerja prima yang berkelanjutan di Indonesia</p>
         </div>
       </div>
 
-      <div className="px-5 md:px-8 xl:px-10 w-full md:w-3/5 lg:w-3/4">
+      <div className="px-5 md:px-8 xl:px-10 w-full md:w-3/5 lg:w-3/4 xl:w-[40%]">
         <div className="MISI flex flex-col gap-5 mt-5 md:mt-10 w-full text-[14px] lg:text-lg xl:text-lg">
-          <h1 className="text-2xl md:text-2xl xl:text-4xl font-bold">Misi Kami</h1>
+          <h1 className="text-2xl md:text-2xl xl:text-3xl font-bold">Misi Kami</h1>
           <div className="flex flex-col md:flex-row items-left md:items-center gap-3 mt-2 md:mt-5 xl:mt-5">
-            <div className="flex-none w-6 h-6 lg:w-6 lg:h-6 xl:w-7 xl:h-7 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
+            <div className="flex-none w-6 h-6 md:w-7 md:h-7 lg:w-6 lg:h-6 xl:w-8 xl:h-8 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
               <IoGitBranchOutline className="text-blue-400 w-4 xl:w-5 h-4 xl:h-5" />
             </div>
             <p className="font-medium">Menjadi solusi teknologi informasi dan komunikasi 
               bagi lingkungan tertutup/terbatas.</p>
           </div>
           <div className="flex flex-col md:flex-row items-left md:items-center gap-3 mt-2">
-            <div className="flex-none  w-6 h-6 lg:w-6 lg:h-6 xl:w-7 xl:h-7 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
+            <div className="flex-none  w-6 h-6 md:w-7 md:h-7 lg:w-6 lg:h-6 xl:w-8 xl:h-8 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
               <TbDeviceMobileUp className="text-blue-400 w-4 xl:w-5 h-4 xl:h-5" />
             </div>
             <p className="font-medium">Menghadirkan teknologi informasi dan komunikasi dengan inovasi yang unggul</p>
           </div>
           <div className="flex flex-col md:flex-row items-left md:items-center gap-3 mt-2">
-            <div className="flex-none  w-6 h-6 lg:w-6 lg:h-6 xl:w-7 xl:h-7 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
+            <div className="flex-none  w-6 h-6 md:w-7 md:h-7 lg:w-6 lg:h-6 xl:w-8 xl:h-8 flex items-center justify-center mx-2 rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
                 <LuHeartHandshake className="text-blue-400 w-4 xl:w-5 h-4 xl:h-5" />
             </div>
             <p id="productSection" className="font-medium">Menyajikan sistem terintegrasi dengan pelayanan terbaik</p>
@@ -143,19 +143,19 @@ export default function Home() {
       </div>
 
       {/* OUR PRODUCT TABLET & DESKTOP*/}
-      <div className="flex flex-col px-14 mt-20 gap-20 hidden md:flex">
-        <h1 className="text-center mt-10 text-4xl font-bold">Our Product</h1>
+      <div className="flex flex-col px-14 mt-20 gap-20 xl:gap-40 hidden md:flex">
+        <h1 className="text-center mt-10 text-3xl font-bold">Our Product</h1>
 
         {/* WARTELSUS */}
         <div className="flex flex-row">
           <div className="flex flex-col w-[50%] text-gray-500 text-xl">
-            <h1 className="text-4xl xl:text-3xl lg:text-xl md:text-xl font-bold text-gray-700 mt-20">I-Wartelsus</h1>
-            <h2 className="text-xl xl:text-xl md:text-sm font-bold text-gray-700 mt-3">{"(Integrated WarungTelekomunikasi Khusus)"}</h2>
+            <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20">I-Wartelsus</h1>
+            <h2 className="text-xl md:text-sm lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"(Integrated WarungTelekomunikasi Khusus)"}</h2>
 
-            <p className="mt-5 text-lg xl:text-lg lg:text-sm md:text-xs">adalah fasilitas telekomunikasi berbasis teknologi data yang terintegrasi 
+            <p className="mt-5 text-lg md:text-xs lg:text-[16px] xl:text-lg">adalah fasilitas telekomunikasi berbasis teknologi data yang terintegrasi 
               online secara nasional. Sistem komunikasi ini mencakup voice call, video call,
                serta layanan komunikasi dan informasi lainnya....</p>
-            <button className="rounded-xl bg-blue-500 text-white w-1/3 xl:w-base lg:w-1/3 md:w-1/2 xl:w-1/4 py-3 mt-8 lg:text-sm md:text-xs"
+            <button className="rounded-xl bg-blue-500 text-white w-[40%] lg:w-[35%] xl:w-[30%] py-3 mt-3 lg:text-sm md:text-xs xl:text-lg"
             onClick={() => setActiveModal("wartelsus")}
             >Lihat lebih detail</button>
           </div>
@@ -164,10 +164,10 @@ export default function Home() {
           <div className="relative flex justify-center items-center w-[50%]">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-100 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] xl:h-[75%] lg:h-[60%] md:h-[40%] bg-white/10 backdrop-blur-none 
-                            rounded-2xl shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] xl:h-[75%] lg:h-[60%] md:h-[40%] bg-white/10 backdrop-blur-none 
+                            rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
-              <Image src={Product1} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-3xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
+              <Image src={Product1} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
         </div>
@@ -177,46 +177,46 @@ export default function Home() {
           <div className="relative flex justify-center items-center w-[50%]">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] xl:h-[75%] lg:h-[60%] md:h-[40%] backdrop-blur-none 
-                            rounded-2xl shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] xl:h-[75%] lg:h-[60%] md:h-[40%] backdrop-blur-none 
+                            rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
-              <Image src={Product2} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-3xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
+              <Image src={Product2} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
 
           <div className="flex flex-col w-[50%]"> 
-            <h1 className="text-4xl xl:text-3xl lg:text-xl md:text-xl font-bold text-gray-700 mt-20">IMC PAS</h1>
-            <h2 className="text-xl xl:text-xl md:text-sm font-bold text-gray-700 mt-3">{"Integrated Monitoring Pemasyarakatan Center"}</h2>
+            <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20">IMC PAS</h1>
+            <h2 className="text-xl md:text-[13px] lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"Integrated Monitoring Pemasyarakatan Center"}</h2>
 
-            <p className="mt-5 text-lg xl:text-lg lg:text-sm md:text-xs">adalah fasilitas pusat pemantauan berbasis teknologi data yang terintegrasi 
+            <p className="mt-5 text-lg md:text-xs lg:text-[16px] xl:text-lg">adalah fasilitas pusat pemantauan berbasis teknologi data yang terintegrasi 
                   on line secara nasional sebagai media monitoring dan deteksi dini Pemasyarakatan...</p>
                   <button 
                   onClick={() => setActiveModal("imcPas")}
-                  className="rounded-xl bg-blue-500 text-white w-1/3 xl:w-base lg:w-1/3 md:w-1/2 xl:w-1/4 py-3 mt-8 lg:text-sm md:text-xs">Lihat lebih detail</button>
+                  className="rounded-xl bg-blue-500 text-white w-[40%] lg:w-[35%] xl:w-[30%] py-3 mt-3 lg:text-sm md:text-xs xl:text-lg">Lihat lebih detail</button>
           </div>
         </div>
 
         {/* PAYPAS */}
         <div className="flex flex-row">
           <div className="flex flex-col w-[50%]">
-          <h1 className="text-4xl xl:text-3xl lg:text-xl md:text-xl font-bold text-gray-700 mt-20">Paypas</h1>
-          <h2 className="text-xl xl:text-xl md:text-sm font-bold text-gray-700 mt-3">{"Payment Pemasyarakatan"}</h2>
+          <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20">Paypas</h1>
+          <h2 className="text-xl md:text-sm lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"Payment Pemasyarakatan"}</h2>
 
-          <p className="mt-5 text-lg xl:text-lg lg:text-sm md:text-xs">Paypas (Payment Pemasyarakatan) adalah sistem pembayaran elektronik yang 
+          <p className="mt-5 text-lg md:text-xs lg:text-[16px] xl:text-lg ">Paypas (Payment Pemasyarakatan) adalah sistem pembayaran elektronik yang 
               memanfaatkan virtual account dan teknologi biometrik untuk memastikan transaksi yang aman,
                efisien, dan terkontrol di lingkungan pemasyarakatan ...</p>
                <button 
                onClick={() => setActiveModal("payPas")}
-               className="rounded-xl bg-blue-500 text-white w-1/3 xl:w-base lg:w-1/3 md:w-1/2 xl:w-1/4 py-3 mt-8 lg:text-sm md:text-xs">Lihat lebih detail</button>
+               className="rounded-xl bg-blue-500 text-white w-[40%] lg:w-[35%] xl:w-[30%] py-3 mt-3 lg:text-sm md:text-xs xl:text-lg">Lihat lebih detail</button>
           </div>
 
           <div className="relative flex justify-center items-center w-[50%]">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] xl:h-[75%] lg:h-[60%] md:h-[40%] bg-white/10 backdrop-blur-none 
-                            rounded-2xl shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] xl:h-[75%] lg:h-[60%] md:h-[40%] bg-white/10 backdrop-blur-none 
+                            rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
-              <Image src={Product3} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-3xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
+              <Image src={Product3} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
 
@@ -249,30 +249,30 @@ export default function Home() {
       </div>
 
       {/* KEUNGGULAN */}
-      <div className="flex flex-col items-center px-5">
-        <h1 className="mt-10 text-xl md:text-2xl xl:text-3xl font-bold text-center">Keunggulan Menggunakan Jasa Kami</h1>
-        <div className="bg-gray-100 mt-8 rounded-2xl py-5 px-5 w-full md:w-3/4 text-blue-900 text-xs lg:text-lg xl:text-lg font-bold">
+      <div className="flex flex-col items-center px-5 mt-10 md:mt-0">
+        <h1 className="mt-6 text-md md:text-2xl xl:text-3xl font-bold text-center w-3/4 md:w-full">Keunggulan Menggunakan Jasa Kami</h1>
+        <div className="bg-gray-100 mt-8 rounded-2xl py-5 px-5 md:px-8 w-full md:w-3/4 lg:w-3/5 xl:w-1/2 text-[#4B5563] text-[11px] md:text-lg lg:text-lg xl:text-lg font-semibold">
           <div className="flex flex-row items-center gap-5">
             <div className="flex-none w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
-              <PiCheckCircleFill className="text-blue-900 w-5 h-5" />
+              <PiCheckCircleFill className="text-[#002453] w-5 h-5" />
             </div>            
             <p>Legal</p>
           </div>
           <div className="flex flex-row items-center gap-5 mt-5">
             <div className="flex-none w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
-              <PiCheckCircleFill className="text-blue-900 w-5 h-5" />
+              <PiCheckCircleFill className="text-[#002453] w-5 h-5" />
             </div>
             <p>Pemberdayaan ekonomi Pemasyarakatan</p>
           </div>
           <div className="flex flex-row items-center gap-5 mt-5">
             <div className="flex-none w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
-              <PiCheckCircleFill className="text-blue-900 w-5 h-5" />
+              <PiCheckCircleFill className="text-[#002453] w-5 h-5" />
             </div>
             <p>Sistem Prabayar</p>
           </div>
           <div className="flex flex-row items-center gap-5 mt-5">
             <div className="flex-none w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 ring-4 ring-blue-200 backdrop-blur-lg">
-              <PiCheckCircleFill className="text-blue-900 w-5 h-5" />
+              <PiCheckCircleFill className="text-[#002453] w-5 h-5" />
             </div>
             <p id="partnerSection">Pemantauan Berjenjang</p>
           </div>
@@ -280,13 +280,13 @@ export default function Home() {
       </div>
 
       {/* KERJASAMA */}
-      <div className="flex flex-col items-center text-center text-lg px-5 mt-10 gap-5 bg-gray-100">
-        <h1 className=" mt-10 text-lg xl:text-3xl font-bold">Kerjasama Dan Pengembangan</h1>
-        <p className="w-full lg:w-3/4 text-xs md:text-sm xl:text-lg">Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
+      <div className="flex flex-col justify-center items-center text-center text-lg px-5 mt-10 gap-5 md:gap-10 bg-gray-100">
+        <h1 className=" mt-10 text-lg lg:text-2xl xl:text-3xl font-bold">Kerjasama Dan Pengembangan</h1>
+        <p className="w-full md:w-[80%] lg:w-3/4 text-xs md:text-xs lg:text-[15px] xl:text-lg text-left md:text-center">Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
            Asasi Manusia Republik Indonesia melalui Direktorat Jenderal Pemasyarakatan, sebagai berikut:</p>
         <button 
         onClick={() => setIsCooperationModalOpen(true)}
-        className="rounded-xl bg-blue-500 text-white text-xs xl:text-lg w-1/2 md:w-1/4 xl:w-1/5 py-2 mb-14">Lihat lebih detail</button>
+        className="rounded-xl bg-blue-500 text-white text-[12px] xl:text-lg w-1/2 md:w-1/5 xl:w-1/5 py-1 mb-10">Lihat lebih detail</button>
         <ModalCooperation 
           isOpen={isCooperationModalOpen} 
           onClose={() => setIsCooperationModalOpen(false)} 
