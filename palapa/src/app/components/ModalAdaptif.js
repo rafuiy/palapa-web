@@ -12,7 +12,7 @@ const ModalAdaptif = ({ isOpen, onClose }) => {
                   transition-opacity duration-300 md:text-xs ${isOpen || isHovered ? "opacity-100" : "opacity-0 pointer-events-none"}`}
     >
       {/* Container Modal */}
-    <div className="relative bg-white p-5 w-[100%] md:w-[50%] text-[10px] md:text-[15px] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
+    <div className="relative bg-white p-7 py-10 lg:px-10 md:p-8 w-[100%] md:w-[70%] text-[10px] md:text-[15px] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
 
                 {/* Ikon di Background */}
         <div className="absolute bottom-0 left-[-60] text-blue-200 opacity-30 text-[200px] z-[-1]">
@@ -29,13 +29,13 @@ const ModalAdaptif = ({ isOpen, onClose }) => {
         <h2 className="text-lg font-bold text-blue-900 mb-4">ADAPTIF</h2>
 
         {/* Konten */}
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-[#002453] leading-relaxed">
         Sebagai perusahaan yang bergerak di bidang teknologi, PT Palapa Teknologi
         Indonesia sangat menyadari pentingnya kemampuan untuk beradaptasi dengan cepat
         terhadap perubahan
         </p>
         <br />
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-[#002453] leading-relaxed">
             Dunia teknologi yang terus berkembang menuntut perusahaan untuk
             terus berinovasi dan mengubah strategi serta metode kerja agar tetap relevan. PT Palapa
             Teknologi Indonesia menumbuhkan budaya yang adaptif dengan mendorong karyawan

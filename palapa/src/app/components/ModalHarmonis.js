@@ -13,7 +13,7 @@ const ModalHarmonis = ({ isOpen, onClose }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Container Modal */}
-      <div className="relative bg-white p-5 w-[100%] md:w-[50%] text-[10px] md:text-[15px] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
+      <div className="relative bg-white p-7 py-10 md:p-8 lg:px-10 w-[100%] md:w-[70%] text-[10px] md:text-[15px] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
       
         {/* Ikon di Background */}
         <div className="absolute bottom-0 left-[-60] text-blue-200 opacity-30 text-[200px] z-[-1]">
@@ -31,14 +31,14 @@ const ModalHarmonis = ({ isOpen, onClose }) => {
         <h2 className="text-lg font-bold text-blue-900 mb-4">HARMONIS</h2>
 
         {/* Konten */}
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-[#002453] leading-relaxed">
         Budaya harmonis adalah kunci dalam menciptakan lingkungan kerja yang produktif
         dan menyenangkan di PT Palapa Teknologi Indonesia. Perusahaan ini meyakini bahwa
         komunikasi yang terbuka, saling menghargai, dan kerja sama yang solid antar tim adalah
         faktor penting dalam mencapai tujuan bersama. 
         </p>
         <br />
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-[#002453] leading-relaxed">
         Dengan menjaga hubungan yang harmonis,
         baik antara karyawan, manajemen, maupun dengan klien, PT Palapa Teknologi Indonesia
         dapat menghadirkan solusi terbaik dan meningkatkan kinerja secara keseluruhan. Harmoni

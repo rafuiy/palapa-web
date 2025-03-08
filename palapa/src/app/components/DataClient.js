@@ -148,7 +148,7 @@ export default function DataClient() {
           <div key={i} className="relative">
             <button
               ref={buttonRef}
-              className="px-6 py-1 text-[10px] md:text-base lg:text-sm font-bold text-white bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 transition"
+              className="px-6 py-1 text-[10px] md:text-base lg:text-sm font-bold text-white bg-[#5091EC] rounded-lg shadow-md hover:bg-blue-600 transition"
               onClick={(e) => {
                 toggleMarquee(); // Panggil fungsi untuk mengontrol marquee
                 toggleDropdown(button, e); // Panggil fungsi untuk menampilkan dropdown
@@ -166,13 +166,14 @@ export default function DataClient() {
         createPortal(
           <div
             ref={dropdownRef}
-            className="absolute w-max mt-2 bg-white border border-gray-300 rounded-lg shadow-md z-50"
+            className="absolute w-max mt-2 bg-[#F4F7F9] rounded-lg shadow-md z-50"
             style={{ top: dropdownPosition.top, left: dropdownPosition.left }}
           >
             {cityData[activeDropdown].map((city, index) => (
-              <p key={index} className="px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
+              <p key={index} className="px-4 py-2 text-gray-800">
                 {city}
               </p>
+              
             ))}
           </div>,
           document.body
@@ -197,11 +198,11 @@ export default function DataClient() {
         createPortal(
           <div
             ref={dropdownRef}
-            className="absolute w-max mt-2 bg-white border border-gray-300 rounded-lg shadow-md z-50"
+            className="absolute w-max mt-2 bg-[#F4F7F9] border border-gray-300 rounded-lg shadow-md z-50"
             style={{ top: dropdownPosition.top, left: dropdownPosition.left }}
           >
             {cityData[activeDropdown].map((city, index) => (
-              <p key={index} className="px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
+              <p key={index} className="px-4 py-2 text-gray-800">
                 {city}
               </p>
             ))}

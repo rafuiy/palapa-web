@@ -5,15 +5,15 @@ export default function ModalProducts({ isOpen, onClose, title, imageSrc, descri
   
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-        <div className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-md">
+        <div className="bg-white rounded-2xl shadow-lg p-6 w-[90%] max-w-md">
           {/* Header Modal */}
           <h2 className="text-lg font-bold text-center">{title}</h2>
   
           {/* Gambar */}
-          <Image src={imageSrc} alt={title} className="w-full h-32 object-contain my-4 rounded-xl shadow-[20px_-10px_35px_rgba(80,110,255,0.3)]" />
+          <Image src={imageSrc} alt={title} className="w-full h-32 object-contain my-4 rounded-2xl shadow-[10px_-10px_35px_rgba(80,110,255,0.4)]" />
   
           {/* Deskripsi */}
-          <p className="mt-3 text-xs md:text-sm text-gray-600">{description}</p>
+          <p className="mt-3 text-xs md:text-sm text-[#000000]">{description}</p>
   
           {/* Button Close */}
           <div className="mt-6 flex justify-between text-xs md:text-sm">

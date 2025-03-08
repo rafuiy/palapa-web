@@ -49,24 +49,24 @@ export default function IkhlasDisplay() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-4 md:gap-8">
+    <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-4 md:gap-6 xl:gap-10">
       {words.map((word, index) => (
         <div
           key={index}
-          className="flex flex-row items-center md:flex-col md:items-center gap-4 md:gap-2"
+          className="flex flex-row items-center md:flex-col-reverse md:items-center gap-10 md:gap-2"
         >
           {/* Huruf dalam lingkaran */}
           <div
             onClick={() => setActiveModal(word.text)}
             onMouseEnter={() => handleMouseEnter(word.text)}
             onMouseLeave={handleMouseLeave}
-            className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-[#002453] text-white text-5xl md:text-6xl lg:text-7xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
+            className="w-24 h-24 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center bg-[#002453] text-white text-6xl md:text-6xl lg:text-7xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
             style={{ fontFamily: "Zen Tokyo Zoo, sans-serif" }}
           >
             {word.letter}
           </div>
           {/* Teks di samping (mobile) dan di bawah (tablet ke atas) */}
-          <p className="text-lg font-semibold text-gray-800">{word.text}</p>
+          <p className="text-lg font-bold text-[#002453]">{word.text}</p>
         </div>
       ))}
 

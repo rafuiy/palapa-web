@@ -1,4 +1,4 @@
-import { FaTimes } from "react-icons/fa";
+import { LiaTimesSolid } from "react-icons/lia";
 
 const ModalAboutUs = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -6,18 +6,18 @@ const ModalAboutUs = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
       {/* Container Modal */}
-      <div className="relative bg-white p-3 md:p-5 w-[90%] max-w-3xl rounded-2xl shadow-lg">
+      <div className="relative bg-white p-5 md:px-10 md:py-14 w-[90%] lg:w-[80%] xl:w-[70%] rounded-2xl shadow-lg">
         {/* Tombol Close */}
         <button onClick={onClose} className="absolute bg-blue-100 p-1 rounded-2xl top-4 right-4 text-gray-500 hover:text-gray-700">
-          <FaTimes size={20} />
+          <LiaTimesSolid size={20} />
         </button>
 
         {/* Header */}
-        <h3 className="text-xs px-3 mt-2 font-semibold text-gray-700">Cerita Kami</h3>
-        <h2 className="text-lg px-3 font-bold text-blue-400 mb-4">About Us</h2>
+        <h3 className="text-xs px-3 mt-5 md:mt-0 font-semibold text-gray-900">Cerita Kami</h3>
+        <h2 className="text-sm md:text-4xl px-3 font-semibold text-blue-300 mb-2">About Us</h2>
 
         {/* Konten */}
-        <div className="bg-white shadow-[10px_10px_35px_rgba(0,110,255,0.3)] rounded-2xl p-3 md:p-5 text-gray-700 text-sm leading-relaxed border border-gray-100 relative">
+        <div className="bg-white shadow-[10px_10px_35px_rgba(0,110,255,0.3)] rounded-2xl p-5 md:pt-6 md:pb-14 md:px-3 text-[#002453] text-sm leading-relaxed border border-gray-100 relative">
           <div className="absolute inset-0 blur-2xl opacity-30 rounded-2xl"></div>
           <div className="relative text-[10px] md:text-sm">
             <p>
@@ -35,8 +35,10 @@ const ModalAboutUs = ({ isOpen, onClose }) => {
             </p>
             <br />
             <p>
-              Dengan inovasi yang terus berkembang, Palapa Teknologi menjadi mitra penting bagi pemerintah dalam
-              mewujudkan pemasyarakatan yang lebih transparan, aman, dan efisien.
+            Dengan inovasi yang terus berkembang, Palapa Teknologi menjadi mitra penting bagi pemerintah
+            dalam mewujudkan pemasyarakatan yang lebih transparan, aman, dan efisien, serta mendukung tugas
+            pokok Direktorat Jenderal Pemasyarakatan (Ditjenpas) dalam menjaga ketertiban dan mencegah
+            peredaran narkoba dan pelanggaran hukum lainnya.
             </p>
           </div>
         </div>

@@ -30,8 +30,8 @@ module.exports = {
           
         },
         animation: {
-          marquee: "marquee 25s linear infinite",
-          marqus: "marqus 25s linear infinite", // Ubah durasi sesuai kebutuhan
+          marquee: "marquee 35s linear infinite",
+          marqus: "marqus 35s linear infinite", // Ubah durasi sesuai kebutuhan
         },
 
 
