@@ -21,7 +21,9 @@ import ModalAboutUs from "./components/ModalAboutUs";
 import ModalCooperation from "./components/ModalCooperation";
 import CardCarousel from "./components/Product";
 import ModalProducts from "./components/ModalProducts";
+import KitoButtons from "./components/MoveButton";
 import DataClient from "./components/DataClient";
+import MarqueeButton from "./components/MoveButtons";
 
 
 export default function Home() {
@@ -55,7 +57,7 @@ export default function Home() {
     <div id="heroSection" className="min-h-screen w-full font-inter overflow-hidden">
       <Navbar/>
       {/* HERO SECTION */}
-      <hero className="flex flex-col text-left items-left w-full">
+      <div className="flex flex-col text-left items-left w-full">
         <Image src={Logo} width={100} height={100} alt="Palapa" className="p-5 md:hidden"/>
         <Image src={Herobg} 
           alt="Hero Background" 
@@ -80,7 +82,7 @@ export default function Home() {
             Temukan Kami
           </Link>
         </div>
-      </hero>
+      </div>
 
       {/* ABOUT US */}
       <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 lg:mt-40 xl:mt-32 pt-16 px-5 w-full">
@@ -164,7 +166,7 @@ export default function Home() {
           <div className="relative flex justify-center items-center w-[50%]">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-100 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[65%] xl:h-[75%] bg-white/10 backdrop-blur-none 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[65%] xl:h-[65%] bg-white/10 backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
               <Image src={Product1} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
@@ -177,7 +179,7 @@ export default function Home() {
           <div className="relative flex justify-center items-center w-[50%] md:mt-16">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[55%] lg:h-[75%] xl:h-[85%] backdrop-blur-none 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[55%] lg:h-[75%] xl:h-[75%] backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
               <Image src={Product2} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
@@ -213,7 +215,7 @@ export default function Home() {
           <div className="relative flex justify-center items-center w-[50%] mt-20 xl:mt-40">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
-            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[60%] xl:h-[65%] bg-white/10 backdrop-blur-none 
+            <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[60%] xl:h-[55%] bg-white/10 backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
                             flex justify-center items-center">
               <Image src={Product3} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
@@ -240,11 +242,13 @@ export default function Home() {
         )}
 
       {/* CLIENT */}
-      <div className="flex flex-col mt-0 md:mt-20 gap-6 md:gap-10 items-center bg-gray-100">
-        <h1 className="text-center mt-10 text-lg sm:text-xl md:text-2xl font-bold">Client Kami</h1>
+      <div className="flex flex-col mt-0 pt-4 md:pt-0 md:mt-20 gap-0 md:gap-6 items-center bg-gray-100">
+        <h1 className="text-center mt-2 md:mt-4 text-lg sm:text-xl md:text-2xl font-bold">Client Kami</h1>
 
-        <div id="slider-container" className="w-full overflow-hidden relative mb-10">
-          <DataClient/>
+        <div id="slider-container" className="w-full overflow-hidden relative mb-5">
+          {/* <DataClient/> */}
+          <MarqueeButton/>
+          <KitoButtons/>
         </div>
       </div>
 
