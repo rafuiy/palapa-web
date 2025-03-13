@@ -2,15 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
-import Herobg from "@/app/assets/HeroBackground.png";
-import MbHerobg from "@/app/assets/mobileBG.png"
-import Product1 from "@/app/assets/iWartel.png";
-import Product2 from "@/app/assets/Imcpas.png";
-import Product3 from "@/app/assets/Paypas.png";
+import Herobg from "./assets/HeroBackground.png";
+import MbHerobg from "./assets/mobileBG.png"
+import Product1 from "./assets/iWartel.png";
+import Product2 from "./assets/Imcpas.png";
+import Product3 from "./assets/Paypas.png";
 import IkhlasDisplay from "./components/IkhlasMap";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact"
-import Logo from "@/app/assets/Logo.png";
+import Logo from "./assets/Logo.png";
 import { IoGitBranchOutline } from "react-icons/io5";
 import { TbDeviceMobileUp } from "react-icons/tb";
 import { LuHeartHandshake } from "react-icons/lu";

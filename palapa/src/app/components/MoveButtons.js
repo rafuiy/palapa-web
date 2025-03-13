@@ -151,7 +151,6 @@ export default function MarqueeButton() {
         style={{ animationPlayState: isRunning ? "running" : "paused" }}
         onMouseEnter={toggleMarquee}
         onMouseLeave={toggleMarquee}
-        onClick={toggleMarquee}
       >
         {loopedButtons.map((button, index) => (
           <div key={index} className="relative">
@@ -160,7 +159,6 @@ export default function MarqueeButton() {
             className={`px-7 md:px-9 xl:px-14 py-1 md:py-1 text-white text-[10px] md:text-sm lg:text-md xl:text-lg rounded-lg shadow-md w-full ${button.color} bg-blue-500 hover:bg-blue-600`}
             onMouseEnter={(e) => showDropdown(button.id, e)}
             onMouseLeave={() => setOpenDropdown(null)} 
-            onClick={(e) => showDropdown(button.id, e)}// Keluar akan menutup dropdown
           >
             {button.text}
           </button>
