@@ -1,43 +1,138 @@
-"use client"
-import { useState } from "react";
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
-import Logo from "@/app/assets/Logo.png" 
+import { useState } from "react";
+import Logo from "@/app/assets/Logo.png";
+import { FiBriefcase , FiInfo, FiShoppingBag, FiPhone } from "react-icons/fi"; // Ikon dari react-icons
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // State untuk menyimpan tombol yang sedang aktif
+  const [activeSection, setActiveSection] = useState("#heroSection");
+
+  // Fungsi untuk mengubah tombol yang aktif
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
 
   return (
-    <nav className="sticky top-0 z-50 w-full flex justify-between items-center p-4 bg-white">
-
-      <div className="text-xl font-bold">
-        <Image src={Logo} className="navLogo" width={100} height={100} alt="Palapa"/>
-      </div>
-      <div className="flex space-x-14 items-center">
-        <Link href="/" className="border-2 border-blue-500 text-gray-700 text-center border-2 border-blue-500 p-1
-               rounded-tl-[10px] rounded-tr-[30px] 
-               rounded-bl-[30px] rounded-br-[10px] w-[100%] hover:text-blue-500">Home</Link>
-        <Link href="/about" className="text-gray-70 w-[100%] hover:text-blue-500">About Us</Link>
-        <Link href="/history" className="text-gray-70 hover:text-blue-500">Our History</Link>
-
-        <div className="relative text-white">
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="bg-[#002453] px-4 py-2 rounded-md w-[150px]"
-          >
-            Our Services ▼
-          </button>
-          {dropdownOpen && (
-            <div className="absolute right-0 mt-2 bg-[#002453] shadow-lg rounded-md py-2">
-              <Link href="/services/visi-misi" className="block px-4 py-2">Visi Misi</Link>
-              <Link href="/services/stories" className="block px-4 py-2">Our Stories</Link>
-              <Link href="/services/products" className="block px-4 py-2">Our Product</Link>
-              <Link href="/contact" className="block px-4 py-2">Contact Us</Link>
-            </div>
-          )}
+    <>
+      {/* Navbar Desktop */}
+      <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-8 py-2 xl:py-1 bg-white hidden md:flex">
+        {/* Logo */}
+        <div className="text-md font-bold flex items-center">
+          <Image src={Logo} className="navLogo" width={80} height={80} alt="Palapa" />
         </div>
-      </div>
-    </nav>
+
+        {/* Navbar Links */}
+        <div className="flex items-center space-x-2 md:space-x-4 lg:space-x-10 text-sm md:text-xs lg:text-md xl:text-[15px] font-normal">
+          <a
+            href="#heroSection"
+            onClick={() => handleNavClick("#heroSection")}
+            className={`text-[#002453] text-center py-2 md:py-1 px-6 md:px-4 rounded-tl-[10px] rounded-tr-[30px] 
+                rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500 transition-all duration-300 ${
+                  activeSection === "#heroSection" ? "border-2 border-blue-500" : ""
+                }`}
+          >
+            Beranda
+          </a>
+          <a
+            href="#aboutSection"
+            onClick={() => handleNavClick("#aboutSection")}
+            className={`text-[#002453] text-center py-2 md:py-1 px-6 md:px-4 rounded-tl-[10px] rounded-tr-[30px] 
+              rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500 transition-all duration-300 ${
+                activeSection === "#aboutSection" ? "border-2 border-blue-500" : ""
+              }`}
+          >
+            Tentang Kami
+          </a>
+          <a
+            href="#productSection"
+            onClick={() => handleNavClick("#productSection")}
+            className={`text-[#002453] text-center py-2 md:py-1 px-6 md:px-4 rounded-tl-[10px] rounded-tr-[30px] 
+              rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500 transition-all duration-300 ${
+                activeSection === "#productSection" ? "border-2 border-blue-500" : ""
+              }`}
+          >
+            Produk
+          </a>
+          <a
+            href="#partnerSection"
+            onClick={() => handleNavClick("#partnerSection")}
+            className={`text-[#002453] text-center py-2 md:py-1 px-6 md:px-4 rounded-tl-[10px] rounded-tr-[30px] 
+              rounded-bl-[30px] rounded-br-[10px] w-auto hover:text-blue-500 transition-all duration-300 ${
+                activeSection === "#partnerSection" ? "border-2 border-blue-500" : ""
+              }`}
+          >
+            Partner
+          </a>
+
+          {/* Tombol "Hubungi Kami" */}
+          <a
+            href="#contactSection"
+            onClick={() => handleNavClick("#contactSection")}
+            className={`bg-blue-500 text-white font-normal px-6 py-2 rounded-lg flex items-center hover:text-gray-200 transition-all duration-300 ${
+              activeSection === "#contactSection" ? "ring-2 ring-blue-300" : ""
+            }`}
+          >
+            Hubungi Kami
+          </a>
+        </div>
+      </nav>
+
+      {/* Navbar Mobile */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-t-md py-2 flex justify-around items-center z-50 border-t">
+        {/* <a
+          href="#heroSection"
+          onClick={() => handleNavClick("#heroSection")}
+          className={`flex flex-col items-center ${
+            activeSection === "#heroSection" ? "text-blue-600 border-t-2 border-blue-500 pt-1" : "text-gray-600"
+          }`}
+        >
+          <FiHome className="text-2xl" />
+          <span className="text-xs">Beranda</span>
+        </a> */}
+        <a
+          href="#aboutSection"
+          onClick={() => handleNavClick("#aboutSection")}
+          className={`flex flex-col items-center ${
+            activeSection === "#aboutSection" ? "text-blue-600 border-t-2 border-blue-500 pt-1" : "text-gray-600"
+          }`}
+        >
+          <FiInfo className="text-2xl" />
+          <span className="text-xs">Tentang</span>
+        </a>
+        <a
+          href="#productSection"
+          onClick={() => handleNavClick("#productSection")}
+          className={`flex flex-col items-center ${
+            activeSection === "#productSection" ? "text-blue-600 border-t-2 border-blue-500 pt-1" : "text-gray-600"
+          }`}
+        >
+          <FiShoppingBag className="text-2xl" />
+          <span className="text-xs">Produk</span>
+        </a>
+        <a
+          href="#partnerSection"
+          onClick={() => handleNavClick("#partnerSection")}
+          className={`flex flex-col items-center ${
+            activeSection === "#partnerSection" ? "text-blue-600 border-t-2 border-blue-500 pt-1" : "text-gray-600"
+          }`}
+        >
+          <FiBriefcase className="text-2xl" />
+          <span className="text-xs">Partner</span>
+        </a>
+        <a
+          href="#contactSection"
+          onClick={() => handleNavClick("#contactSection")}
+          className={`flex flex-col items-center ${
+            activeSection === "#contactSection" ? "text-blue-600 border-t-2 border-blue-500 pt-1" : "text-gray-600"
+          }`}
+        >
+          <FiPhone className="text-2xl" />
+          <span className="text-xs">Hubungi</span>
+        </a>
+      </nav>
+    </>
   );
 };
 
