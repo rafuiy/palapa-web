@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="bg-white pt-8 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row text-[#2E312D] items-start gap-10 xl:gap-20">
           {/* Kiri: Logo dan Deskripsi */}
-          <div className="md:w-2/3 text-sm md:text-xs md:text-md lg:text-[13px] xl:text-[14px] md:w-[45%]">
+          <div className="md:w-2/3 text-sm md:text-xs md:text-md lg:text-[md] xl:text-base md:w-[45%]">
             <Image src={Logo} width={100} height={120} alt="Palapa" className="mb-4"/>
             <p className="text-gray-700">
               Palapa senantiasa menggaungkan semangat transformasi yang berkelanjutan sebagai bagian dari komitmennya untuk merealisasikan visi menjadi perusahaan global energi kelas dunia serta mendukung terwujudnya kemandirian energi nasional.

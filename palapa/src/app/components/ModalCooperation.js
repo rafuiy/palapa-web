@@ -8,7 +8,7 @@ const ModalCooperation = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
       {/* Container Modal */}
       <div className="relative bg-white border border-white/20 
-                      p-3 py-8 md:px-10 md:py-12 w-[90%] lg:w-[75%] xl:w-[50%] rounded-2xl text-left">
+                      p-3 py-8 md:px-10 md:py-12 w-[90%] lg:w-[75%] xl:w-[65%] rounded-2xl text-left">
         
         {/* Tombol Close */}
         <button 
@@ -32,23 +32,39 @@ const ModalCooperation = ({ isOpen, onClose }) => {
 
           <div className="relative">
             <p className="font-semibold">
-              Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
-              Asasi Manusia Republik Indonesia melalui Direktorat Jenderal Pemasyarakatan, sebagai berikut:
+            Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
+            Asasi Manusia Republik Indonesia melalui Direktorat Jenderal Pemasyarakatan, sebagai berikut:
             </p>
             <br />
             
             <ol className="list-decimal ml-5 space-y-3">
               <li>
-                Petunjuk Pelaksanaan Direktur Bina Keamanan dan Ketertiban Direktorat Jenderal Pemasyarakatan No.: PAS.6.OT.03.01-12 Tahun 2008 tentang Penyelenggaraan Telekomunikasi Khusus (Wartelsus) pada Lembaga Pemasyarakatan, Rumah Tahanan Negara, dan Cabang Rumah Tahanan Negara di Seluruh Indonesia.
+              Petunjuk Pelaksana Direktur Bina Keamanan dan Ketertiban Direktorat Jenderal
+              Pemasyarakatan No : PAS.6.OT.03,01- 12 Tahun 2008 tentang Penyelenggaraan
+              Telekomunikasi Khusus (Wartelsus0 Pada Lembaga Pemasyarakatan, Rumah Tahanan Negara
+              dan Cabang Rumah Tahanan Negara di Seluruh Indonesia
               </li>
               <li>
-                Perjanjian Kerjasama antara Direktorat Bina Keamanan dan Ketertiban Direktorat Jenderal Pemasyarakatan dengan PT. Palapa Teknologi Indonesia mengenai peningkatan teknologi telekomunikasi di lingkungan pemasyarakatan.
+              Perjanjian Kerjasama antara Direktorat Bina Keamanan dan Ketertiban Direktorat Jenderal
+              Pemasyarakatan dengan PT. Palapa Teknologi Indonesia, nomor : PAS2.DL.02.02.03-249 dan
+              nomor 001/PTI–DTJENPAS/IV /2012, tanggal 05 September 2012 tentang Peningkatan
+              Teknologi Telekomunikasi dan Informasi Integrated Wartelsus (I-Wartelsus) Pada Kantor
+              Pusat Direktorat Jenderal Pemasyarakatan, Divisi Pemasyarakatan dan Unit Pelaksana Teknis
+              Pemasyarakatan di Seluruh Indonesia.              
               </li>
               <li>
-                Nota Kesepahaman tentang pembangunan, pengembangan, dan pendampingan sistem pemantauan layanan telekomunikasi di lingkungan pemasyarakatan.
+              Nota Kesepahaman antara Direktorat Jenderal Pemasyarakatan dan PT. Palapa Teknologi
+              Indonesia, nomor PAS-31.HM.05.03 Th 2016 dan nomor PTI-DITJENPAS/MOU/2016/IV-
+              001, tanggal 27 April 2016 tentang Pembangunan, Pengembangan dan Pendampingan Serta
+              Pengaman Sistem Telekomunikasi dalam rangka layanan Pemasyarakatan berbasis Teknologi
+              Informasi.
               </li>
               <li>
-                Optimalisasi Wartelsus dan pemanfaatan IMC PAS sebagai sarana monitoring dan deteksi dini di lingkungan pemasyarakatan.
+              Perjanjian Kerjasama Antara Direktorat Jenderal Pemasyarakatan Kementrian Hukum dan Hak
+              Asasi Manusia dengan PT. Palapa Teknologi Indonesia Nomor PAS-10.HH.05.05 Tahun 2021
+              dan No 013/PKS-DITJENPAS/IV/2021 tanggal 27 April 2021 tentang Optimalisasi I-
+              Wartelsus dan Pemanfaatan IMC PAS Sebagai Sarana Monitoring dan Deteksi Dini
+              Pemasyarakatan
               </li>
             </ol>
           </div>

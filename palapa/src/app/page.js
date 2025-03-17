@@ -54,7 +54,7 @@ export default function Home() {
 
 
   return (
-    <div id="heroSection" className="min-h-screen w-full font-inter overflow-hidden">
+    <div id="heroSection" className="w-full font-inter overflow-hidden">
       <Navbar/>
       {/* HERO SECTION */}
       <div className="flex flex-col text-left items-left w-full">
@@ -64,8 +64,15 @@ export default function Home() {
           objectFit="contain" 
           objectPosition="bottom right" 
           // style={{ height: "55%", width: "45%"}}
-          className="absolute bottom-[45%] md:bottom-[45%] lg:bottom-[0%] xl:bottom-[0%] right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] hidden md:flex"/>
-        <div className="flex flex-col w-full justify-center w-full sm:w-full lg:mt-20 xl:mt-0 md:w-3/5 lg:w-1/2 xl:w-1/2 text-[#002453]">
+          className="absolute top-56 2xl:top-20 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[35%] hidden md:flex"/>
+        <div 
+        // style={{
+        //   backgroundImage: "url('./assets/HeroBackground.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   height: "100vh",
+        // }}
+        className="flex flex-col w-full justify-center w-full sm:w-full lg:mt-20 xl:mt-0 md:w-3/5 lg:w-1/2 xl:w-1/2 text-[#002453]">
           <h1 className="pt-10 px-3 md:px-6 lg:px-10 xl:px-10 font-bold text-700 text-xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 sm:mt-10 md:mt-32 lg:mt-38 xl:mt-48">
             Sarana Telekomunikasi Legal Pemasyarakatan
           </h1>
@@ -149,7 +156,7 @@ export default function Home() {
         <h1 className="text-center mt-10 md:mt-5 lg:mt-0 lg:mb-16 text-3xl md:text-2xl xl:text-3xl font-bold">Our Product</h1>
 
         {/* WARTELSUS */}
-        <div className="flex flex-row xl:mt-20">
+        <div className="flex flex-row xl:mt-2">
           <div className="flex flex-col w-[50%] text-gray-500 text-xl">
             <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20 lg:mt-10">I-Wartelsus</h1>
             <h2 className="text-xl md:text-sm lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"(Integrated WarungTelekomunikasi Khusus)"}</h2>
@@ -163,12 +170,12 @@ export default function Home() {
           </div>
 
           
-          <div className="relative flex justify-center items-center w-[50%]">
+          <div className="relative flex justify-center items-center w-[50%] py-0">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-100 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
             <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[65%] xl:h-[65%] bg-white/10 backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
-                            flex justify-center items-center">
+                            flex justify-center items-center py-0 2xl:py-40">
               <Image src={Product1} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
@@ -181,7 +188,7 @@ export default function Home() {
             
             <div className="w-[70%] md:w-[90%] h-[60%] md:h-[55%] lg:h-[75%] xl:h-[75%] backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
-                            flex justify-center items-center">
+                            flex justify-center items-center 2xl:py-40">
               <Image src={Product2} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
@@ -217,7 +224,7 @@ export default function Home() {
             
             <div className="w-[70%] md:w-[90%] h-[60%] md:h-[45%] lg:h-[60%] xl:h-[55%] bg-white/10 backdrop-blur-none 
                             rounded-lg shadow-[30px_0px_50px_rgba(80,110,255,0.3)] 
-                            flex justify-center items-center">
+                            flex justify-center items-center 2xl:py-40">
               <Image src={Product3} objectFit="contain" alt="I-Wartelsus" className="w-[80%] h-auto rounded-xl shadow-[30px_-10px_50px_rgba(80,110,255,0.3)]" />
             </div>
           </div>
