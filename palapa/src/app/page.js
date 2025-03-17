@@ -25,6 +25,32 @@ import KitoButtons from "./components/MoveButton";
 import DataClient from "./components/DataClient";
 import MarqueeButton from "./components/MoveButtons";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
 
 export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
@@ -64,7 +90,15 @@ export default function Home() {
           objectFit="contain" 
           objectPosition="bottom right" 
           // style={{ height: "55%", width: "45%"}}
-          className="absolute top-56 2xl:top-20 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[35%] hidden md:flex"/>
+          className="absolute top-56 2xl:top-20 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[35%] hidden md:flex" 
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-bottom"/>
         <div 
         // style={{
         //   backgroundImage: "url('./assets/HeroBackground.png')",
@@ -72,7 +106,15 @@ export default function Home() {
         //   backgroundPosition: "center",
         //   height: "100vh",
         // }}
-        className="flex flex-col w-full justify-center w-full sm:w-full lg:mt-20 xl:mt-0 md:w-3/5 lg:w-1/2 xl:w-1/2 text-[#002453]">
+        className="flex flex-col w-full justify-center w-full sm:w-full lg:mt-20 xl:mt-0 md:w-3/5 lg:w-1/2 xl:w-1/2 text-[#002453]"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom">
           <h1 className="pt-10 px-3 md:px-6 lg:px-10 xl:px-10 font-bold text-700 text-xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 sm:mt-10 md:mt-32 lg:mt-38 xl:mt-48">
             Sarana Telekomunikasi Legal Pemasyarakatan
           </h1>
@@ -92,23 +134,51 @@ export default function Home() {
       </div>
 
       {/* ABOUT US */}
-      <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 lg:mt-40 xl:mt-32 pt-16 px-5 w-full">
-        <h1 className="text-[#002453] flex text-xl md:text-2xl xl:text-3xl font-bold mt-10 md:mt-0 lg:mt-40 xl:mt-40 justify-center">Tentang Kami</h1>
+      <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 lg:mt-40 xl:mt-32 pt-16 px-5 w-full" 
+      >
+        <h1 className="text-[#002453] flex text-xl md:text-2xl xl:text-3xl font-bold mt-10 md:mt-0 lg:mt-40 xl:mt-40 justify-center" 
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom">Tentang Kami</h1>
         <div className="flex flex-row gap-8 mt-5 md:mt-8 xl:mt-12 text-lg items-start justify-center md:pl-5">
-          <div className="flex-none w-8 md:w-7 lg:w-8 xl:w-10 h-8 md:h-7 lg:h-8 xl:h-10 flex mt-4 lg:mt-3 items-center justify-center rounded-full bg-[#E4EEFF] ring-8 ring-blue-100 backdrop-blur-lg hidden md:flex">
+          <div className="flex-none w-8 md:w-7 lg:w-8 xl:w-10 h-8 md:h-7 lg:h-8 xl:h-10 flex mt-4 lg:mt-3 items-center justify-center rounded-full bg-[#E4EEFF] ring-8 ring-blue-100 backdrop-blur-lg hidden md:flex"
+          data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
               <PiRocketLaunch className="text-blue-400 w-5 md:w-4 xl:w-6 h-4 md:h-4 xl:h-5 items-center" />
           </div>
 
 
           <div className="w-full sm:w-full md:w-[90%] xl:w-[90%]">
-            <p className="text-[#0A2E61] text-xs md:text-[10px] lg:text-[14px] xl:text-xl w-full md:w-[95%] lg:w-[92%] lg:w-[95%] mt-1"><strong>Palapa Teknologi</strong> didirikan secara resmi pada 26 September 2005 dan bergerak di bidang
+            <p className="text-[#0A2E61] text-xs md:text-[10px] lg:text-[14px] xl:text-xl w-full md:w-[95%] lg:w-[92%] lg:w-[95%] mt-1"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-bottom"><strong>Palapa Teknologi</strong> didirikan secara resmi pada 26 September 2005 dan bergerak di bidang
               perdagangan besar piranti lunak serta layanan teknologi informasi dan komunikasi. Sebagai anak
               perusahaan dari PT. Pasopati Nusantara Holding Company, Palapa Teknologi memiliki peran strategis 
               dalam menyediakan solusi telekomunikasi yang aman, legal, dan terintegrasi.</p>
               <button 
               onClick={() => setIsModalOpen(true)}
               className="bg-blue-500 text-white p-3 xl:p-2 text-[10px] xl:text-[15px] rounded-xl w-[35%] md:w-[15%] lg:w-[13%] xl:w-[13%] mt-5 md:mt-8 lg:mt-10 xl:mt-12 text-center py-1"
-              >
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-bottom">
             Selengkapnya
               </button>
         <ModalAboutUs isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
@@ -118,7 +188,16 @@ export default function Home() {
       </div>
 
       {/* VISION & MISSION */}
-      <div className="px-3 md:px-6 xl:px-10 w-full bg-[#F5F5F5]">
+      <div className="px-3 md:px-6 xl:px-10 w-full bg-[#F5F5F5]" 
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom"
+    >
         <div className="VISI flex flex-col gap-3 text-[#002453] sm:gap-3 md:gap-10 mt-10 py-10">
           <h1 className="text-xl md:text-2xl xl:text-3xl font-bold ">Visi Kami</h1>
           <p className="text-xs md:text-md lg:text-[15px] xl:text-xl md:w-[80%] lg:w-3/4 xl:w-[65%]"><strong>Palapa Teknologi</strong> memiliki visi untuk menjadi penyedia layanan telekomunikasi dan Informasi handal
@@ -126,7 +205,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-5 md:px-8 xl:px-10 w-full text-[#0A2E61] md:w-3/5 lg:w-[45%] xl:w-[45%]">
+      <div className="px-5 md:px-8 xl:px-10 w-full text-[#0A2E61] md:w-3/5 lg:w-[45%] xl:w-[45%]" 
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
         <div className="MISI flex flex-col gap-5 mt-5 md:mt-10 w-full text-xs lg:text-[15px] xl:text-xl">
           <h1 className="text-2xl md:text-2xl xl:text-3xl font-bold">Misi Kami</h1>
           <div className="flex flex-col md:flex-row items-left md:items-center gap-3 mt-4 md:mt-5 xl:mt-5">
@@ -156,7 +243,15 @@ export default function Home() {
         <h1 className="text-center mt-10 md:mt-5 lg:mt-0 lg:mb-16 text-3xl md:text-2xl xl:text-3xl font-bold">Our Product</h1>
 
         {/* WARTELSUS */}
-        <div className="flex flex-row xl:mt-2">
+        <div className="flex flex-row xl:mt-2"
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom">
           <div className="flex flex-col w-[50%] text-gray-500 text-xl">
             <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20 lg:mt-10">I-Wartelsus</h1>
             <h2 className="text-xl md:text-sm lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"(Integrated WarungTelekomunikasi Khusus)"}</h2>
@@ -182,7 +277,14 @@ export default function Home() {
         </div>
 
         {/* IMC PAS */}
-        <div className="flex flex-row space-x-10 xl:mt-40">
+        <div className="flex flex-row space-x-10 xl:mt-40" data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
           <div className="relative flex justify-center items-center w-[50%] md:mt-16">
             <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
             
@@ -206,7 +308,15 @@ export default function Home() {
         </div>
 
         {/* PAYPAS */}
-        <div className="flex flex-row">
+        <div className="flex flex-row" 
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom">
           <div className="flex flex-col w-[50%] md:mt-16 xl:mt-40">
           <h1 className="text-4xl md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-700 mt-20">Paypas</h1>
           <h2 className="text-xl md:text-sm lg:text-lg xl:text-2xl font-bold text-gray-700 mt-3">{"Payment Pemasyarakatan"}</h2>
@@ -260,7 +370,14 @@ export default function Home() {
       </div>
 
       {/* KEUNGGULAN */}
-      <div className="flex flex-col items-center px-2 md:px-5 mt-10 md:mt-0 xl:mt-5">
+      <div className="flex flex-col items-center px-2 md:px-5 mt-10 md:mt-0 xl:mt-5" data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
         <h1 className="mt-6 text-md text-[#002453] md:text-2xl xl:text-3xl font-bold text-center w-3/4 md:w-full">Keunggulan Menggunakan Jasa Kami</h1>
         <div className="bg-gray-100 mt-8 rounded-2xl py-5 px-5 md:px-8 w-full md:w-3/4 lg:w-3/5 xl:w-1/2 text-[#4B5563] text-[11px] md:text-lg lg:text-lg xl:text-xl font-semibold">
           <div className="flex flex-row items-center gap-5">
@@ -292,12 +409,39 @@ export default function Home() {
 
       {/* KERJASAMA */}
       <div className="flex flex-col justify-center items-center text-center text-lg px-5 mt-10 gap-5 md:gap-10 xl:gap-16 xl:py-5 bg-gray-100">
-        <h1 className=" mt-10 text-lg lg:text-2xl xl:text-3xl font-bold">Kerjasama Dan Pengembangan</h1>
-        <p className="text-[#4B5563] w-full md:w-[80%] lg:w-3/4 text-xs md:text-xs lg:text-[15px] xl:text-xl text-left md:text-center">Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
+        <h1 className=" mt-10 text-lg lg:text-2xl xl:text-3xl font-bold"
+         data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-delay="50"
+         data-aos-duration="500"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         data-aos-anchor-placement="top-bottom">
+          Kerjasama Dan Pengembangan</h1>
+        <p className="text-[#4B5563] w-full md:w-[80%] lg:w-3/4 text-xs md:text-xs lg:text-[15px] xl:text-xl text-left md:text-center"
+         data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-delay="50"
+         data-aos-duration="500"
+         data-aos-easing="ease-in-out"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         data-aos-anchor-placement="top-bottom"
+        >Palapa Teknologi telah menjalin beberapa kerjasama penting dengan Kementerian Hukum dan Hak
            Asasi Manusia Republik Indonesia melalui Direktorat Jenderal Pemasyarakatan, sebagai berikut:</p>
         <button 
         onClick={() => setIsCooperationModalOpen(true)}
-        className="rounded-lg bg-blue-500 text-white text-[8px] md:text-[10px] xl:text-lg w-[40%] md:w-1/5 lg:w-[15%] xl:w-[15%] py-0 xl:py-2 mb-10">Lihat lebih detail</button>
+        className="rounded-lg bg-blue-500 text-white text-[8px] md:text-[10px] xl:text-lg w-[40%] md:w-1/5 lg:w-[15%] xl:w-[15%] py-0 xl:py-2 mb-10"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom">
+          Lihat lebih detail</button>
         <ModalCooperation 
           isOpen={isCooperationModalOpen} 
           onClose={() => setIsCooperationModalOpen(false)} 
@@ -306,13 +450,32 @@ export default function Home() {
 
       {/* NILAI DASAR */}
       <div className="flex flex-col h-screen md:h-full md:pb-24 items-center text-center px-5 xl:px-10 mt-5 md:mt-20 gap-10 text-[#4B5563]">
-        <h1 className="mt-10 text-xl md:text-2xl xl:text-3xl font-bold text-blue-500">Nilai-Nilai Dasar<br/>Perusahaan</h1>
-        <p className="w-full md:w-[90%] text-sm font-semibold md:text-[12px] lg:text-[15px] xl:text-xl text-start hidden md:block">PT Palapa Teknologi Indonesia adalah perusahaan yang berkomitmen untuk menjadi pemimpin
+        <h1 className="mt-10 text-xl md:text-2xl xl:text-3xl font-bold text-blue-500"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom"
+        >Nilai-Nilai Dasar<br/>Perusahaan</h1>
+        <p className="w-full md:w-[90%] text-sm font-semibold md:text-[12px] lg:text-[15px] xl:text-xl text-start hidden md:block"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-bottom"
+        >PT Palapa Teknologi Indonesia adalah perusahaan yang berkomitmen untuk menjadi pemimpin
           dalam bidang teknologi informasi dan solusi digital di Indonesia. Dengan mengedepankan nilai-nilai
           IKHLAS dalam setiap aspek operasionalnya, perusahaan ini berusaha untuk menciptakan lingkungan
           kerja yang profesional, inovatif, dan berkelanjutan. Berikut adalah penjabaran nilai IKHLAS yang
           diterapkan oleh PT Palapa Teknologi Indonesia:</p>
-        <div className="mt-5 lg:mt-20">
+        <div className="mt-5 lg:mt-20" 
+        >
           <IkhlasDisplay />
         </div>
       </div>
