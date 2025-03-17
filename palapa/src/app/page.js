@@ -57,6 +57,11 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCooperationModalOpen, setIsCooperationModalOpen] = useState(false);
 
+  if (typeof document !== "undefined") {
+    const title = document.title; // ✅ Ini hanya berjalan di client
+  }
+  
+
   const modals = {
     wartelsus: {
       title: "I-Wartelsus",

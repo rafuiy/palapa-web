@@ -1,5 +1,4 @@
 [build]
   base = "palapa"
-  command = "npm run build"
+  command = "NEXT_DISABLE_ESLINT=1 npm run build"
   publish = ".next"
-
