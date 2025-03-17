@@ -5,8 +5,8 @@ import { RiGlobalLine } from "react-icons/ri";
 
 export default function Footer() {
     return (
-      <footer className="bg-white pt-8 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row text-[#2E312D] items-start gap-10 xl:gap-20">
+      <footer className="bg-white pt-8 px-4 md:px-12 xl:px-20">
+        <div className="mx-auto flex flex-col md:flex-row text-[#2E312D] items-start gap-10 xl:gap-20">
           {/* Kiri: Logo dan Deskripsi */}
           <div className="md:w-2/3 text-sm md:text-xs md:text-md lg:text-[md] xl:text-base md:w-[45%]">
             <Image src={Logo} width={100} height={120} alt="Palapa" className="mb-4"/>

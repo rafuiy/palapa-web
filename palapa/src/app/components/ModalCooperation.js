@@ -8,7 +8,7 @@ const ModalCooperation = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
       {/* Container Modal */}
       <div className="relative bg-white border border-white/20 
-                      p-3 py-8 md:px-10 md:py-12 w-[90%] lg:w-[75%] xl:w-[65%] rounded-2xl text-left">
+                      p-3 pt-6 px-2 md:px-6 md:pt-8 md:pb-6 w-[95%] lg:w-[75%] xl:w-[65%] rounded-2xl text-left">
         
         {/* Tombol Close */}
         <button 
@@ -25,7 +25,8 @@ const ModalCooperation = ({ isOpen, onClose }) => {
         {/* Konten */}
         <div className="relative bg-white border border-white/20 
                         shadow-[0px_20px_35px_rgba(0,110,255,0.5)] 
-                        rounded-2xl p-3 py-5 md:p-7 text-[#002453] text-[10px] md:text-xs leading-relaxed">
+                        rounded-2xl p-3 md:p-4 lg:p-7 text-[#002453] text-xs md:text-xs
+                        max-h-80 md:max-h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
           
           {/* Efek Glow di Background */}
           {/* <div className="absolute inset-0 blur-3xl opacity-40 rounded-2xl bg-blue-100"></div> */}

@@ -9,7 +9,18 @@ export default function KitoButton() {
   const containerRef = useRef(null);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 }); // Simpan ID button yang sedang dibuka
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768); // Tambahan: Cek apakah layar mobile
+    };
 
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   const toggleMarquee = () => {
     if (containerRef.current) {
@@ -157,8 +168,12 @@ export default function KitoButton() {
           {/* Button */}
           <button
             className={`px-7 md:px-9 xl:px-14 py-1 md:py-1 text-white text-[10px] md:text-sm lg:text-md xl:text-lg rounded-lg shadow-md w-full ${button.color} bg-blue-500 hover:bg-blue-600`}
-            onMouseEnter={(e) => showDropdown(button.id, e)}
-            onMouseLeave={() => setOpenDropdown(null)} // Keluar akan menutup dropdown
+            {...(isMobile // Tambahan: Kondisional untuk mobile atau desktop
+              ? { onClick: (e) => showDropdown(button.id, e) } // Mobile pakai onClick
+              : {
+                  onMouseEnter: (e) => showDropdown(button.id, e), // Desktop pakai onMouseEnter
+                  onMouseLeave: () => setOpenDropdown(null), // Desktop pakai onMouseLeave
+                })} // Keluar akan menutup dropdown
           >
             {button.text}
           </button>
@@ -169,9 +184,9 @@ export default function KitoButton() {
        {/* Dropdown */}
        {openDropdown !== null &&
         createPortal(
-            <div className="dropdown-menu absolute bg-[#F4F7F9] mt-5 w-auto shadow-lg rounded-md p-5 pt-0"
+            <div className="dropdown-menu absolute bg-[#F4F7F9] mt-5 w-auto shadow-lg rounded-md px-0 md:p-5 pt-0"
             style={{ top: dropdownPosition.top, left: dropdownPosition.left }}>
-              <h3 className="inline-block font-bold py-1 mt-1 rounded-xl bg-[#5091EC] px-5 text-white text-[10px] md:text-sm">
+              <h3 className="inline-block font-bold py-1 mt-1 rounded-xl bg-[#5091EC]  mx-4 md:mx-0 px-5 text-white text-[10px] md:text-sm">
 
               {buttons.find((b) => b.id === openDropdown)?.text}
             </h3>

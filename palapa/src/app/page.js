@@ -188,7 +188,7 @@ export default function Home() {
       </div>
 
       {/* VISION & MISSION */}
-      <div className="px-3 md:px-6 xl:px-10 w-full bg-[#F5F5F5]" 
+      <div className="px-6 md:px-6 xl:px-10 w-full bg-[#F5F5F5]" 
       data-aos="fade-right"
       data-aos-offset="200"
       data-aos-delay="50"
