@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next-on-netlify",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "next-on-netlify"
+    "lint": "next lint"
   },
   "dependencies": {
     "aos": "^2.3.4",
