@@ -83,14 +83,14 @@ export default function Home() {
     <div id="heroSection" className="w-full font-inter overflow-hidden">
       <Navbar/>
       {/* HERO SECTION */}
-      <div className="flex flex-col text-left items-left w-full">
+      <div className="flex flex-col 2xl:justify-center 2xl:items-start text-left items-left w-full 2xl:h-screen">
         <Image src={Logo} width={100} height={100} alt="Palapa" className="p-5 md:hidden"/>
         <Image src={Herobg} 
           alt="Hero Background" 
           objectFit="contain" 
-          objectPosition="bottom right" 
+          // objectPosition="bottom right" 
           // style={{ height: "55%", width: "45%"}}
-          className="absolute top-56 2xl:top-20 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[35%] hidden md:flex" 
+          className="absolute top-56 2xl:top-auto 2xl:bottom-0 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[40%] hidden md:flex" 
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="50"
@@ -100,22 +100,17 @@ export default function Home() {
           data-aos-once="false"
           data-aos-anchor-placement="top-bottom"/>
         <div 
-        // style={{
-        //   backgroundImage: "url('./assets/HeroBackground.png')",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   height: "100vh",
-        // }}
         className="flex flex-col w-full justify-center w-full sm:w-full lg:mt-20 xl:mt-0 md:w-3/5 lg:w-1/2 xl:w-1/2 text-[#002453]"
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top-bottom">
-          <h1 className="pt-10 px-3 md:px-6 lg:px-10 xl:px-10 font-bold text-700 text-xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 sm:mt-10 md:mt-32 lg:mt-38 xl:mt-48">
+        // data-aos="fade-right"
+        // data-aos-offset="200"
+        // data-aos-delay="50"
+        // data-aos-duration="1000"
+        // data-aos-easing="ease-in-out"
+        // data-aos-mirror="true"
+        // data-aos-once="false"
+        // data-aos-anchor-placement="top-bottom">
+        >
+          <h1 className="pt-10 px-3 md:px-6 lg:px-10 xl:px-10 font-bold text-700 text-xl sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl mt-10 sm:mt-10 md:mt-32 lg:mt-38 xl:mt-48 2xl:mt-auto">
             Sarana Telekomunikasi Legal Pemasyarakatan
           </h1>
           <Image src={MbHerobg}
@@ -134,7 +129,7 @@ export default function Home() {
       </div>
 
       {/* ABOUT US */}
-      <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 lg:mt-40 xl:mt-32 pt-16 px-5 w-full" 
+      <div id="aboutSection" className="flex flex-col mt-10 md:mt-24 lg:mt-40 xl:mt-32 2xl:mt-0 pt-16 px-5 w-full" 
       >
         <h1 className="text-[#002453] flex text-xl md:text-2xl xl:text-3xl font-bold mt-10 md:mt-0 lg:mt-40 xl:mt-40 justify-center" 
         data-aos="fade-up"
