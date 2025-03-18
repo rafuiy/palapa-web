@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
-import Herobg from "./assets/HeroBackground.png";
+import Herobg from "./assets/Frame 224.png";
 import MbHerobg from "./assets/mobileBG.png"
 import Product1 from "./assets/iWartel.png";
 import Product2 from "./assets/Imcpas.png";
@@ -90,7 +90,7 @@ export default function Home() {
           objectFit="contain" 
           // objectPosition="bottom right" 
           // style={{ height: "55%", width: "45%"}}
-          className="absolute top-56 2xl:top-auto 2xl:bottom-0 right-0 opacity-60 w-[45%] md:w-[45%] lg:w-[50%] 2xl:w-[50%] hidden md:flex" 
+          className="absolute top-32 2xl:top-auto 2xl:bottom-0 right-0 opacity-60 w-[45%] md:w-[55%] lg:w-[60%] 2xl:w-[65%] hidden md:flex" 
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="50"
