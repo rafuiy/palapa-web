@@ -27,4 +27,9 @@ body {
   background: var(--background);
 }
 
+.glass-white {
+  background-color: rgba(80,110,255, 0.1) !important;
+  backdrop-filter: blur(1px);
+}
+
 
