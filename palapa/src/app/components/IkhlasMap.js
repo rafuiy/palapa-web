@@ -51,37 +51,66 @@ export default function IkhlasDisplay() {
   };
 
   return (
-    <div className="flex my-16 flex-col md:flex-row md:justify-center md:items-center gap-4 md:gap-6 xl:gap-16">
-      {words.map((word, index, image) => (
-        <div
-          key={index}
-          className="flex flex-row items-center md:flex-col md:items-center gap-2"
-        >
-          {/* Huruf dalam lingkaran */}
-          <div
-            onClick={() => setActiveModal(word.text)}
-            onMouseEnter={() => handleMouseEnter(word.text)}
-            onMouseLeave={handleMouseLeave}
-            className="w-20 h-20 flex items-center justify-center bg-[#99BFFA] text-[#E7F0FD] text-5xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
-            style={{ fontFamily: "Zen Tokyo Zoo, sans-serif" }}
-          >
-            {word.letter}
-          </div>
-          {/* Teks di samping (mobile) dan di bawah (tablet ke atas) */}
-          <p className="text-md font-bold text-[#3D3D3D]">{word.text}</p>
-
-          <div
-            onClick={() => setActiveModal(word.text)}
-            onMouseEnter={() => handleMouseEnter(word.text)}
-            onMouseLeave={handleMouseLeave}
-            className="w-20 h-20 flex mt-4 items-center justify-center text-[#99BFFA] text-8xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
-          >
-            {word.image}
-          </div>
-        </div>
-      ))}
-
-      {renderModal()}
+    <div className="my-4 md:my-16 flex justify-center items-center md:flex-row flex-col">
+  {/* Grid hanya muncul di mobile */}
+  <div className="grid grid-cols-3 gap-4 md:hidden">
+  {words.map((word, index) => (
+    <div
+      key={index}
+      className={`flex flex-col items-center gap-2 ${index >= 3 ? 'mt-1' : ''} bg-[#FAFAFA] rounded-xl p-2 py-6`}
+    >
+      {/* Huruf dalam lingkaran */}
+      <div
+        onClick={() => setActiveModal(word.text)}
+        onMouseEnter={() => handleMouseEnter(word.text)}
+        onMouseLeave={handleMouseLeave}
+        className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-[#99BFFA] text-[#E7F0FD] text-4xl md:text-5xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
+        style={{ fontFamily: "Zen Tokyo Zoo, sans-serif" }}
+      >
+        {word.letter}
+      </div>
+      <p className="text-md font-bold text-[#3D3D3D]">{word.text}</p>
+      <div
+        onClick={() => setActiveModal(word.text)}
+        onMouseEnter={() => handleMouseEnter(word.text)}
+        onMouseLeave={handleMouseLeave}
+        className="w-16 h-16 md:w-20 md:h-20 flex mt-4 items-center justify-center text-[#99BFFA] text-8xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
+      >
+        {word.image}
+      </div>
     </div>
+  ))}
+</div>
+
+
+  {/* Versi non-mobile (md ke atas) */}
+  <div className="hidden md:flex flex-row gap-6 xl:gap-16">
+    {words.map((word, index) => (
+      <div key={index} className="flex flex-col items-center gap-2">
+        <div
+          onClick={() => setActiveModal(word.text)}
+          onMouseEnter={() => handleMouseEnter(word.text)}
+          onMouseLeave={handleMouseLeave}
+          className="w-20 h-20 flex items-center justify-center bg-[#99BFFA] text-[#E7F0FD] text-5xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
+          style={{ fontFamily: "Zen Tokyo Zoo, sans-serif" }}
+        >
+          {word.letter}
+        </div>
+        <p className="text-md font-bold text-[#3D3D3D]">{word.text}</p>
+        <div
+          onClick={() => setActiveModal(word.text)}
+          onMouseEnter={() => handleMouseEnter(word.text)}
+          onMouseLeave={handleMouseLeave}
+          className="w-20 h-20 flex mt-4 items-center justify-center text-[#99BFFA] text-8xl rounded-full cursor-pointer hover:bg-[#001a3d] transition"
+        >
+          {word.image}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {renderModal()}
+</div>
+
   );
 }

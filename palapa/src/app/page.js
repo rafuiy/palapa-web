@@ -8,6 +8,10 @@ import { FaCheckCircle } from 'react-icons/fa';
 import Stories from "./assets/Stories-img.png";
 import Client_Kementrian from "./assets/Client-1.png"
 import Client_Lapas from "./assets/Client-2.png"
+import IkhlasDisplay from "./components/IkhlasMap";
+
+import { FaMapMarkerAlt, FaWhatsapp   } from "react-icons/fa";
+import { MdOutlineMarkEmailRead } from "react-icons/md";
 
 
 const features = [
@@ -46,36 +50,37 @@ export default function Home() {
       <Navbar/>
 
       {/* HERO SECTION */}
-      <div className="flex flex-col mx-10 h-screen items-center">
+      <div className="flex flex-col mx-5 md:mx-10 md:h-screen items-start md:items-center">
         <div 
         className="
           flex flex-col 
           justify-center
-          gap-6
-          h-screen
+          gap-3 md:gap-6
+          md:h-screen
           text-[#002453]"
         >
 
           <h3 className="
           w-fit
-          mx-auto
-          px-4 py-2
-          rounded-lg
+          mx-none sm:mx-10 md:mx-auto
+          px-4 py-1 md:py-2
+          rounded-md md:rounded-lg
           bg-[#E7F0FD]
-          text-[#639DF7] text-xs font-medium">
+          text-[#639DF7] text-[10px] sm:text-[10px] font-medium">
             PT. PALAPA TEKNOLOGI
           </h3>
 
           <h1 className="
-          px-3 md:px-6 lg:px-10 xl:px-10 
-          font-bold text-[#3D3D3D] text-700 text-5xl
-          w-1/2
-          mx-auto">
+          px-0 md:px-6 lg:px-10 xl:px-10 
+          font-bold text-[#3D3D3D] text-700 text-xl sm:text-xl md:text-5xl
+          w-4/5 md:w-1/2
+          md:mx-auto
+          ">
             Sarana Telekomunikasi Legal Pemasyarakatan
           </h1>
           <p className="font-normal 
-          text-md text-center text-[#3D3D3D]
-          w-3/5 
+          text-sm md:text-md text-left md:text-center text-[#3D3D3D]
+          w-full md:w-3/5 
           mt-5 mx-auto
           ">
             PT. Palapa Teknologi Indonesia didirikan secara resmi pada 26 September 2005 dan bergerak di bidang
@@ -87,7 +92,8 @@ export default function Home() {
           <Link href="#contactSection"
               className="
               bg-[#186CE1] text-white font-normal text-center text-sm
-              p-2 px-8
+              mt-5 md:mt-0
+              px-6 py-3 md:px-8 md:py-2
               w-fit
               mx-auto
               rounded-xl
@@ -99,6 +105,8 @@ export default function Home() {
 
       {/* OUR STORIES */}
       <div>
+      <hr className="md:hidden border-t border-gray-300 my-14 mx-4" />
+
         <div 
           className="
             flex flex-col 
@@ -119,7 +127,7 @@ export default function Home() {
 
           <h1 className="
             px-3 
-            font-bold text-[#3D3D3D] text-700 text-3xl
+            font-bold text-[#3D3D3D] text-700 text-xl md:text-3xl
             
             mx-auto">
               Keunggulan Kami
@@ -128,7 +136,7 @@ export default function Home() {
           flex justify-center align-center mt-10
           ">
             {/* Img */}
-            <div className="w-96 h-106 mx-10 relative">
+            <div className="hidden md:flex w-96 h-106 mx-10 relative">
               <Image 
                 src={Stories} 
                 alt="Palapa" 
@@ -137,16 +145,16 @@ export default function Home() {
               />
             </div>
             {/* Lists */}
-            <div className="space-y-6 max-w-lg">
+            <div className="space-y-6 max-w-lg mx-4 md:mx-0">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="w-14 h-8 bg-[#E7F0FD] rounded-full flex items-center justify-center  text-center">
-                  <FaCheckCircle className="text-blue-500 text-xl" />
+                <div className="w-18 h-18 p-2 md:p-0 md:w-14 md:h-8 bg-[#E7F0FD] rounded-full flex items-center justify-center text-center">
+                  <FaCheckCircle className="text-blue-500 text-lg md:text-xl" />
                 </div>
 
               <div>
               <h3 className="font-bold text-lg text-[#3D3D3D]">{feature.title}</h3>
-              <p className="font-normal text-sm text-[#3D3D3D]">{feature.description}</p>
+              <p className="my-2 md:my-0 font-normal text-sm text-[#3D3D3D]">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -163,7 +171,7 @@ export default function Home() {
             justify-center
             gap-6
             text-[#002453]
-            mt-40 mb-32"
+            mt-20 md:mt-40 mb-32"
           >
 
           <h3 className="
@@ -178,17 +186,115 @@ export default function Home() {
 
           <h1 className="
             px-3 
-            font-bold text-[#3D3D3D] text-700 text-3xl
+            font-bold text-[#3D3D3D] text-700 text-xl md:text-3xl
             
             mx-auto">
               Client Kebanggan Kami
           </h1>
-          <div className="flex justify-around gap-20 mx-auto mt-6">
-            <Image src={Client_Kementrian} alt="Logo Kementrian" className="h-56 w-56" />
-            <Image src={Client_Lapas} alt="Logo Lapas" className="h-64 w-64"/>
+          <div className="flex justify-around gap-5 md:gap-20 mx-auto mt-6">
+            <Image src={Client_Kementrian} alt="Logo Kementrian" className="w-36 h-36 md:h-56 md:w-56" />
+            <Image src={Client_Lapas} alt="Logo Lapas" className="w-40 h-40 md:h-64 md:w-64"/>
           </div>
 
         </div>
+      </div>
+
+      {/* COMP VALUES */}
+      <div className="md:hidden">
+        <div 
+          className="
+            flex flex-col 
+            justify-center
+            gap-6
+            text-[#002453]
+            mt-20 md:mt-40 mb-32"
+          >
+
+          <h3 className="
+            w-fit
+            mx-auto
+            px-6 py-3
+            rounded-lg
+            bg-[#E7F0FD]
+            text-[#639DF7] text-sm font-medium">
+              Company Values
+          </h3>
+
+          <h1 className="
+            px-3 
+            font-bold text-[#3D3D3D] text-700 text-xl md:text-3xl
+            
+            mx-auto">
+              Nilai-Nilai Perusahaan 
+          </h1>
+          <IkhlasDisplay />
+
+        </div>
+      </div>
+
+      {/* CONTACT US */}
+      <div className="md:hidden mb-20">
+        <div className="relative w-[90%] mx-auto">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6196948688334!2d106.89035037418397!3d-6.31358696178271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edfe6ea481f9%3A0xd2ded6731b79fb6!2sGRAHA%20PASOPATI%20NUSANTARA!5e0!3m2!1sid!2sid!4v1741107375046!5m2!1sid!2sid"
+          loading="lazy" 
+          className="w-full min-h-[250px] rounded-3xl shadow-[6px_6px_10px_rgba(0,0,0,0.2)]">
+          </iframe>
+
+        {/* Tombol lihat di Google Maps */}
+          <a
+            href="https://www.google.com/maps?q=Graha+Pasopati+Nusantara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-4 left-1/3 transform -translate-x-1/2 bg-white text-gray-900 px-4 py-2 rounded-lg text-xs font-semibold shadow-md flex items-start justify-left space-x-2 hover:bg-gray-200"
+          >
+            <FaMapMarkerAlt className="text-gray-600" />
+            <span>Lihat dari Google Maps</span>
+          </a>
+        </div>
+
+        <div className="flex w-4/5 mt-10 mx-auto justify-between gap-10">
+            
+            <div className="flex flex-col justify-left gap-5">
+                <h3 className="
+                w-fit
+                
+                px-4 py-2
+                rounded-lg
+                bg-[#E7F0FD]
+                text-[#639DF7] text-sm font-medium">
+                  Contact Us  
+                </h3>
+                <h1 className="
+                
+                font-bold text-[#3D3D3D] text-700 text-xl
+                
+                ">
+                Konsultasi Sekarang
+                </h1>
+
+                <div className="flex gap-4 text-3d3d3d text-xs items-start">
+                  <FaMapMarkerAlt className="w-14 h-8 text-[#3882F5] font-semibold"/>
+                  <h4>Jl.Raya Gempol Kavling II No.19, RT.006/002, Gempol Kel, Ceger, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13820</h4>
+                </div>
+
+                {/* BUTTON CTA */}
+                <div className="text-3d3d3d text-sm justify-between items-center">
+                  <div className="flex gap-3 border border-[#DAE5EB] rounded-xl p-4 items-center w-full">
+                    <div className="bg-[#E7F0FD] rounded-full p-2">
+                    <FaWhatsapp />
+                    </div>
+                    <h4 className="bg-[#E7F0FD] rounded-xl p-2 w-full text-center">Chat Via WhatsApp</h4>
+                  </div>
+
+                  <div className="flex gap-3 border border-[#DAE5EB] rounded-xl p-4 items-center w-full mt-6">
+                    <div className="bg-[#E7F0FD] rounded-full p-2">
+                   <MdOutlineMarkEmailRead />
+                   </div>
+                   <h4 className="bg-[#E7F0FD] rounded-xl p-2 w-full text-center">Chat Via Email</h4>
+                  </div>
+                </div>
+            </div>
+            </div>
       </div>
 
       {/* FOOTER */}
@@ -198,4 +304,3 @@ export default function Home() {
     </div>
   );
 }
-// cake

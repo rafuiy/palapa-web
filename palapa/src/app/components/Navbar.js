@@ -103,30 +103,34 @@ const Navbar = () => {
       </nav>
 
       {/* Navbar Mobile */}
+      <div className="md:hidden mb-10 bg-white w-full p-2 md:px-6 ">
+      <Image src={Logo} className="navLogo" width={100} height={100} alt="Palapa" />
+      </div>
       <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-t-md py-2 flex justify-around items-center z-50 border-t">
+        <Link
+          href="/"
+          className={`flex flex-col items-center text-gray-600`}
+        >
+          <FiInfo className="text-2xl" />
+          <span className="text-xs">Beranda</span>
+        </Link>
         <a
-          href="#aboutSection"
+          href="/about-us"
           className={`flex flex-col items-center text-gray-600`}
         >
           <FiInfo className="text-2xl" />
           <span className="text-xs">Tentang</span>
         </a>
         <a
-          href="#productSection"
+          href="/product"
           className={`flex flex-col items-center text-gray-600`}
         >
           <FiShoppingBag className="text-2xl" />
           <span className="text-xs">Produk</span>
         </a>
+        
         <a
-          href="#partnerSection"
-          className={`flex flex-col items-center text-gray-600`}
-        >
-          <FiBriefcase className="text-2xl" />
-          <span className="text-xs">Partner</span>
-        </a>
-        <a
-          href="#contactSection"
+          href="/contact"
           className={`flex flex-col items-center text-gray-600`}
         >
           <FiPhone className="text-2xl" />

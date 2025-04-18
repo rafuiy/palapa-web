@@ -42,15 +42,17 @@ export default function AboutUs() {
 
     return (
       <div className="w-full font-inter overflow-hidden">
+        <div className="">
         <Navbar/>
+        </div>
         {/* Tentang Kami */}
-        <div className="flex flex-col mx-10 mt-28 h-screen items-center">
+        <div className="flex flex-col mx-6 md:mx-10 mt-20 md:mt-28 md:h-screen items-center">
           <div 
             className="
               flex flex-col 
               justify-center
               gap-6
-              h-screen
+              md:h-screen
               text-[#002453]"
             >
 
@@ -66,18 +68,21 @@ export default function AboutUs() {
 
               <h1 className="
               px-3 
-              font-bold text-[#3D3D3D] text-700 text-3xl
+              font-bold text-[#3D3D3D] text-700 text-3xl md:text-3xl
               
               mx-auto">
                 Tentang Kami
             </h1>
             {/* Content */}
             <div className="flex flex-col md:flex-row items-start justify-center gap-6 mt-10">
-              <div className="relative w-full md:w-[365px] h-[250px] rounded-xl overflow-hidden shadow-md">
+            <div className="md:hidden relative w-full h-[200px] rounded-xl overflow-hidden shadow-md">
+                <Image src={About2} alt="About 2" fill className="object-cover rounded-xl" />
+              </div>
+              <div className="hidden md:flex relative w-6 h-6 md:w-[365px] md:h-[250px] rounded-xl overflow-hidden shadow-md">
                 <Image src={About1} alt="About 1" fill className="object-cover rounded-xl" />
               </div>
-              <div className="w-1/2">
-                <h3 className="text-lg md:text-xl font-semibold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
+              <div className="md:w-1/2">
+                <h3 className="text-lg md:text-xl w-3/4 md:w-full font-semibold md:font-bold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
                   Solusi Teknologi untuk Komunikasi di Lapas dan Rutan
                 </h3>
                 <p className="mt-2 text-sm text-[#3D3D3D] text-justify">
@@ -91,11 +96,14 @@ export default function AboutUs() {
             </div>
 
             {/* Content duaa */}
-            <div className="flex flex-col md:flex-row items-start justify-center gap-6">
-              <div className="relative w-full md:w-[365px] h-[150px] rounded-xl overflow-hidden shadow-md">
-                <Image src={About2} alt="About 2" fill className="object-cover rounded-xl" />
+            <div className="flex flex-col md:flex-row items-start justify-center gap-6 mt-10 md:mt-0">
+              <div className="hidden md:flex relative w-full md:w-[365px] h-[150px] rounded-xl overflow-hidden shadow-md">
+                <Image src={About2} alt="About 2" fill className="object-cover  rounded-xl" />
               </div>
-              <div className="w-1/2">
+              <div className="md:hidden relative w-full md:w-[365px] h-[150px] object-cover object-bottom rounded-xl overflow-hidden shadow-md">
+                <Image src={About1} alt="About 2" fill className=" object bottom rounded-xl" />
+              </div>
+              <div className="md:w-1/2">
                 <h3 className="text-lg md:text-xl font-semibold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
                   Mendukung Keamanan dan Efisiensi di Lapas dan Rutan
                 </h3>
@@ -112,8 +120,10 @@ export default function AboutUs() {
         
         {/* Hasil dan Kerjaasama */}
         <div className="
-            mx-40 mt-24">
+            mr-6 md:mx-40 mt-24">
           <h3 className="
+            hidden
+            md:flex
             w-fit
             mt-6
             px-4 py-2
@@ -124,12 +134,14 @@ export default function AboutUs() {
           </h3>
           <h1 className="
               font-bold text-[#3D3D3D] text-700 text-3xl
+              hidden
+              md:flex
               my-6
               mx-auto">
                 Hasil & Kerjasama
             </h1>
           {/* Content */}
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-row-reverse md:flex-row ">
             {/* Text */}
             <div className="flex flex-col gap-6">
               {partnerships.map((item, index) => (
@@ -148,25 +160,25 @@ export default function AboutUs() {
             </div>
 
             {/* Image */}
-            <div className="flex flex-col items-center gap-4">
-              <div className="relative w-[250px] h-[250px] rounded-xl overflow-hidden shadow-md">
+            <div className="flex flex-col items-center gap-6 md:gap-4 ">
+              <div className="relative w-[150px] h-[455px] md:w-[250px] md:h-[250px] rounded-xl overflow-hidden shadow-md">
                 <Image src={Partner1} alt="Partner 1" fill className="object-cover rounded-xl" />
               </div>
 
-              <div className="flex gap-4">
-                <div className="relative w-[120px] h-[150px] rounded-xl overflow-hidden shadow-md">
+              <div className="flex flex-col md:flex-row gap-6 ">
+                <div className="relative w-[150px] h-[570px] md:w-[120px] md:h-[150px] rounded-xl overflow-hidden shadow-md">
                   <Image src={Partner2} alt="Partner 2" fill className="object-cover rounded-xl" />
                 </div>
-                <div className="relative w-[120px] h-[150px] rounded-xl overflow-hidden shadow-md">
+                <div className="relative w-[150px] h-[495px] md:w-[120px] md:h-[150px] rounded-xl overflow-hidden shadow-md">
                   <Image src={Partner3} alt="Partner 3" fill className="object-cover rounded-xl" />
                 </div>
               </div>
 
-              <div className="relative w-[250px] h-[92px] rounded-xl overflow-hidden shadow-md">
+              <div className="hidden md:flex relative w-[250px] h-[92px] rounded-xl overflow-hidden shadow-md">
                 <Image src={Partner4} alt="Partner 4" fill className="object-cover rounded-xl" />
               </div>
 
-              <div className="relative w-[250px] h-[200px] rounded-xl overflow-hidden shadow-md">
+              <div className="relative w-[150px] h-[495px] md:w-[250px] md:h-[200px] rounded-xl overflow-hidden shadow-md">
                 <Image src={Partner5} alt="Partner 5" fill className="object-cover rounded-xl" />
               </div>
             </div>
@@ -174,7 +186,7 @@ export default function AboutUs() {
         </div>
 
         {/* VISI MISII */}
-        <div className="h-screen px-40 bg-[#F1F6FE] mt-40 flex flex-col justify-center">
+        <div className="md:h-screen md:px-40 md:bg-[#F1F6FE] mt-40 flex flex-col justify-center">
           <h3 className="
             w-fit
             mx-auto
@@ -185,20 +197,21 @@ export default function AboutUs() {
               Visi & Mission
           </h3>
           <h1 className="
-              font-bold text-[#3D3D3D] text-700 text-3xl
+              font-bold text-[#3D3D3D] text-700 text-2xl md:text-3xl
               my-6
+              mb-10 md:mb-6
               mx-auto">
                 Visi & Misi Kami
           </h1>
 
           {/* Content */}
           {/* Visi & Misi */}
-          <div className="space-y-6">
+          <div className="space-y-6 bg-[#F1F6FE] md:bg-[#FFF] py-6 px-6 md:px-0 md:mt-6">
             {/* Visi */}
-            <div className="bg-[#FFF] p-6 rounded-xl flex gap-4 w-3/4 justify-left mx-auto">
-            <RiRocket2Line className="text-2xl text-[#fff] bg-[#3882F5] rounded-full p-1 w-10 h-7" />
+            <div className="bg-[#FFF] p-6 rounded-xl flex gap-4 w-full md:w-3/4 justify-left mx-auto">
+            <RiRocket2Line className="text-2xl text-[#fff] bg-[#3882F5] rounded-full p-3 md:p-1 w-40 h-14" />
               <div className="flex flex-col gap-2 mb-2">
-                <h3 className="text-lg font-semibold text-[#3D3D3D]">Visi Kami</h3>
+                <h3 className="text-lg font-semibold text-[#3D3D3D] mt-3">Visi Kami</h3>
                 <p className="text-sm text-[#3D3D3D]">
                 Palapa Teknologi memiliki visi untuk menjadi penyedia layanan telekomunikasi dan informasi handal dan terpercaya dengan kinerja prima yang berkelanjutan di Indonesia
                 </p>
@@ -207,21 +220,21 @@ export default function AboutUs() {
             </div>
 
             {/* Misi */}
-            <div className="bg-[#FFF] p-6 rounded-xl flex gap-4 w-3/4 justify-left mx-auto">
-              <RiFocus2Line className="text-2xl text-[#fff] bg-[#FF4255] rounded-full p-1 mt-1" />
-              <div className="flex flex-col gap-2 mb-2">
+            <div className="bg-[#FFF] p-6 rounded-xl flex gap-4 w-full md:w-3/4 justify-left mx-auto">
+              <RiFocus2Line className="w-24 h-14 md:text-2xl text-[#fff] bg-[#FF4255] rounded-full p-3 md:p-1 mt-1" />
+              <div className="flex flex-col gap-2 mb-2 mt-4">
                 <h3 className="text-lg font-semibold text-[#3D3D3D]">Misi Kami</h3>
                 <ul className="space-y-2 mt-2">
-                <li className="flex items-start gap-2">
-                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-6 h-6" />
+                <li className="flex items-center md:items-start gap-2">
+                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-16 md:w-6 h-8 md:h-6" />
                   <span className="text-sm text-[#3D3D3D]">Menjadi solusi teknologi informasi dan komunikasi bagi lingkungan tertutup/terbatas.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-6 h-6" />
+                <li className="flex items-center md:items-start gap-2">
+                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-12 md:w-6 h-8 md:h-6" />
                   <span className="text-sm text-[#3D3D3D]">Mewujudkan sistem terintegrasi dengan pelayanan terbaik</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-6 h-6" />
+                <li className="flex items-center md:items-start gap-2">
+                  <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-16 md:w-6 h-8 md:h-6" />
                   <span className="text-sm text-[#3D3D3D]">Menghadirkan teknologi informasi dan komunikasi dengan inovasi yang unggul</span>
                 </li>
               </ul>
@@ -232,8 +245,8 @@ export default function AboutUs() {
         </div>
 
         {/* Company Values */}
-        <div className="
-            mx-40 mt-24 flex flex-col gap-6">
+        <div className="hidden
+            mx-40 mt-24 md:flex flex-col gap-6">
           <h3 className="
               w-fit
               mx-auto
