@@ -82,7 +82,7 @@ export default function AboutUs() {
                 <Image src={About1} alt="About 1" fill className="object-cover rounded-xl" />
               </div>
               <div className="md:w-1/2">
-                <h3 className="text-lg md:text-sm lg:text-xl w-3/4 md:w-full font-semibold md:font-bold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
+                <h3 className="text-lg md:text-sm lg:text-xl w-full md:w-full font-semibold md:font-bold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
                   Solusi Teknologi untuk Komunikasi di Lapas dan Rutan
                 </h3>
                 <p className="mt-2 text-sm md:text-xs xl:text-sm text-[#3D3D3D] text-justify">
@@ -228,15 +228,15 @@ export default function AboutUs() {
                 <ul className="space-y-2 mt-2">
                 <li className="flex items-center md:items-start gap-2">
                   <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-16 md:w-8 h-8 md:h-6 lg:w-7 xl:w-6" />
-                  <span className="text-sm md:text-xs xl:text-sm text-[#3D3D3D] md:mt-1 xl:mt-0">Menjadi solusi teknologi informasi dan komunikasi bagi lingkungan tertutup/terbatas.</span>
+                  <span className="text-sm md:text-xs xl:text-sm text-[#0A2E61] md:mt-1 xl:mt-0">Menjadi solusi teknologi informasi dan komunikasi bagi lingkungan tertutup/terbatas.</span>
                 </li>
                 <li className="flex items-center md:items-start gap-2">
                   <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-12 md:w-6 h-8 md:h-6" />
-                  <span className="text-sm md:text-xs xl:text-sm text-[#3D3D3D] md:mt-1 xl:mt-0">Mewujudkan sistem terintegrasi dengan pelayanan terbaik</span>
+                  <span className="text-sm md:text-xs xl:text-sm text-[#0A2E61] md:mt-1 xl:mt-0">Mewujudkan sistem terintegrasi dengan pelayanan terbaik</span>
                 </li>
                 <li className="flex items-center md:items-start gap-2">
                   <RiCheckboxCircleFill className="text-[#3882F5] bg-[#E7F0FD] rounded-full p-1 w-16 md:w-8 h-8 md:h-6 lg:w-7 xl:w-6" />
-                  <span className="text-sm md:text-xs xl:text-sm text-[#3D3D3D] md:mt-1 xl:mt-0">Menghadirkan teknologi informasi dan komunikasi dengan inovasi yang unggul</span>
+                  <span className="text-sm md:text-xs xl:text-sm text-[#0A2E61] md:mt-1 xl:mt-0">Menghadirkan teknologi informasi dan komunikasi dengan inovasi yang unggul</span>
                 </li>
               </ul>
               </div>

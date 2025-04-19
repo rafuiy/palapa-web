@@ -22,7 +22,7 @@ const ModalSinergi = ({ isOpen, onClose }) => {
         <div className="hidden md:flex absolute right-[32] text-[#E7F0FD] text-[200px] z-[-1]">
           <RiExchangeFill className="w-72 h-72"/>
         </div>
-        <div className="md:hidden absolute bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
+        <div className="md:hidden absolute sm:bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
           <RiExchangeFill className="w-48 h-48"/>
         </div>
 

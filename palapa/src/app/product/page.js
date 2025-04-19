@@ -84,7 +84,7 @@ export default function Product() {
                       
                       <div className="relative flex justify-center items-center w-3/4 md:w-[40%] mx-auto py-0">
                       <div className="absolute -z-10 w-3/4 h-3/4 bg-blue-200 opacity-100 blur-3xl rounded-full"></div> {/* Efek Glow */}
-                        <div className="lass-white rounded-xl p-6  shadow-[10px_20px_80px_rgba(80,110,255,0.5)]">
+                        <div className="glass-white rounded-xl p-6  shadow-[10px_20px_80px_rgba(80,110,255,0.5)]">
                           <Image src={Product2} objectFit="contain" alt="I-Wartelsus" className="h-auto text-center  rounded-xl  " />
                         </div>
                       </div>
