@@ -89,7 +89,7 @@ export default function Home() {
             dalam menyediakan solusi telekomunikasi yang aman, legal, dan terintegrasi.
 
           </p>
-          <Link href="#contactSection"
+          <Link href="#stories"
               className="
               bg-[#186CE1] text-white font-normal text-center text-sm
               mt-5 md:mt-0
@@ -108,6 +108,7 @@ export default function Home() {
       <hr className="md:hidden border-t border-gray-300 my-14 mx-4" />
 
         <div 
+          id="stories"
           className="
             flex flex-col 
             justify-center
