@@ -19,12 +19,13 @@ const ModalSinergi = ({ isOpen, onClose }) => {
       <div className="relative bg-white p-7 py-10 md:p-8 lg:px-10 text-[10px] md:text-[15px] w-[100%] md:w-[70%] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
 
                 {/* Ikon di Background */}
+        <div className="flex md:hidden absolute sm:bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
+          <RiExchangeFill className="w-48 h-48"/>
+        </div>
         <div className="hidden md:flex absolute right-[32] text-[#E7F0FD] text-[200px] z-[-1]">
           <RiExchangeFill className="w-72 h-72"/>
         </div>
-        <div className="md:hidden absolute sm:bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
-          <RiExchangeFill className="w-48 h-48"/>
-        </div>
+        
 
         
         {/* Tombol Close */}
