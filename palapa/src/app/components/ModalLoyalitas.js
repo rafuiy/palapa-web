@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import { RiTeamFill } from "react-icons/ri";
+import { RiHandHeartFill } from "react-icons/ri";
 
 
 const ModalLoyalitas = ({ isOpen, onClose }) => {
@@ -9,17 +9,23 @@ const ModalLoyalitas = ({ isOpen, onClose }) => {
   return (
     <div 
       className={`fixed inset-0 flex items-center justify-end px-10 bg-black/30 backdrop-blur-sm z-50 
-                  transition-opacity duration-300 md:text-xs ${isOpen || isHovered ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                  transition-opacity duration-300 ${isOpen || isHovered ? "opacity-100" : "opacity-0 pointer-events-none"}
+                  md:text-xs
+                  `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Container Modal */}
-    <div className="relative bg-white p-7 py-10 md:p-8 lg:px-10 w-[100%] md:w-[70%] text-[10px] md:text-[15px] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
-      
-        {/* Ikon di Background */}
-        <div className="absolute bottom-0 left-[-40] text-blue-200 opacity-30 text-[200px] z-[-1]">
-            <RiTeamFill className="w-25 h-25"/>
+      <div className="relative bg-white p-7 py-10 md:p-8 lg:px-10 text-[10px] md:text-[15px] w-[100%] md:w-[70%] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
+
+                {/* Ikon di Background */}
+        <div className="hidden md:flex absolute right-[32] text-[#E7F0FD] text-[200px] z-[-1]">
+          <RiHandHeartFill className="w-72 h-72"/>
         </div>
+        <div className="md:hidden absolute bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
+          <RiHandHeartFill className="w-48 h-48"/>
+        </div>
+
         
         {/* Tombol Close */}
         <button 
@@ -29,23 +35,43 @@ const ModalLoyalitas = ({ isOpen, onClose }) => {
         </button>
 
         {/* Header */}
-        <h2 className="text-lg font-bold text-blue-900 mb-4">LOYALITAS</h2>
+        <h2 className="text-lg font-semibold text-[#000] mb-4">Loyalitas Sebagai Kunci Keberlanjutan & Kepercayaan</h2>
+        <hr />
 
         {/* Konten */}
-        <p className="text-[#002453] leading-relaxed">
-        Loyalitas menjadi nilai fundamental bagi PT Palapa Teknologi Indonesia, baik dari
-        sisi karyawan, pelanggan, maupun mitra bisnis. Karyawan yang loyal tidak hanya
-        berdedikasi untuk pekerjaan mereka, tetapi juga memiliki rasa tanggung jawab untuk
-        mendukung visi dan misi perusahaan. 
-        </p>
-        <br />
-        <p className="text-[#002453] leading-relaxed">
-        Loyalitas terhadap perusahaan tercermin dari
-        komitmen untuk bekerja dengan sepenuh hati, serta menjaga kualitas dan integritas dalam
-        setiap proyek. Perusahaan juga mengapresiasi loyalitas pelanggan dan mitra bisnis yang
-        telah menjalin hubungan jangka panjang dengan PT Palapa Teknologi Indonesia, yang
-        membantu perusahaan tumbuh dan berkembang.
-        </p>
+        <div className="text-[#000] text-md flex gap-2 items-start mt-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Dedikasi & Tanggung Jawab
+            </h3>
+            <p>Kami menanamkan rasa memiliki dalam setiap individu untuk mendukung visi dan misi perusahaan.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-[#000] text-md flex gap-2 items-start mt-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Komitmen terhadap Kualitas & Integritas
+            </h3>
+            <p>Loyalitas tercermin dalam kerja keras dan konsistensi dalam memberikan hasil terbaik.
+            </p>
+          </div>
+        </div>
+        
+        <div className="text-[#000] text-md flex gap-2 items-start my-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Kemitraan Jangka Panjang
+            </h3>
+            <p>Kami menghargai kepercayaan pelanggan dan mitra bisnis yang terus tumbuh bersama kami.
+            </p>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

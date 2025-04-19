@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import { LuShieldCheck } from "react-icons/lu";
+import { RiShieldCheckFill } from "react-icons/ri";
 
 
 const ModalIntegrity = ({ isOpen, onClose }) => {
@@ -19,8 +19,11 @@ const ModalIntegrity = ({ isOpen, onClose }) => {
       <div className="relative bg-white p-7 py-10 md:p-8 lg:px-10 text-[10px] md:text-[15px] w-[100%] md:w-[70%] max-w-3xl rounded-2xl shadow-lg border border-gray-200 text-left overflow-hidden z-[-2]">
 
                 {/* Ikon di Background */}
-        <div className="absolute bottom-0 left-[-60] text-blue-200 opacity-30 text-[200px] z-[-1]">
-          <LuShieldCheck className="w-25 h-25"/>
+        <div className="hidden md:flex absolute right-[32] text-[#E7F0FD] text-[200px] z-[-1]">
+          <RiShieldCheckFill className="w-72 h-72"/>
+        </div>
+        <div className="md:hidden absolute bottom-[24] right-[10] text-[#E7F0FD] text-[200px] z-[-1]">
+          <RiShieldCheckFill className="w-48 h-48"/>
         </div>
 
         
@@ -32,23 +35,46 @@ const ModalIntegrity = ({ isOpen, onClose }) => {
         </button>
 
         {/* Header */}
-        <h2 className="text-lg font-bold text-blue-900 mb-4">INTEGRITAS</h2>
+        <h2 className="text-lg font-bold md:font-semibold text-[#000] mb-4">Integritas sebagai Pilar Utama PT PALAPA</h2>
+        <hr />
 
         {/* Konten */}
-        <p className="text-[#002453] leading-relaxed">
-          Integritas adalah dasar dari semua tindakan yang dilakukan oleh PT Palapa Teknologi Indonesia. 
-          Perusahaan ini berpegang teguh pada prinsip kejujuran, transparansi, dan etika dalam setiap aspek bisnis.
-        </p>
-        <br />
-        <p className="text-[#002453] leading-relaxed z-2">
-          Setiap keputusan yang diambil, baik di tingkat manajemen maupun di lapangan, selalu mengutamakan kepentingan pelanggan 
-          dan pemangku kepentingan dengan tetap menjaga moralitas yang tinggi.
-        </p>
-        <br />
-        <p className="text-[#002453] leading-relaxed">
-          Integritas memastikan bahwa perusahaan bertindak dengan cara yang benar, mengedepankan kepercayaan dan rasa hormat 
-          yang membangun hubungan jangka panjang yang saling menguntungkan.
-        </p>
+        <div className="text-[#000] text-md flex gap-2 items-start mt-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Komitmen pada Kejujuran & Transparansi
+            </h3>
+            <p>Kami menjunjung tinggi prinsip keterbukaan dalam setiap aspek bisnis, 
+              memastikan kepercayaan pelanggan dan mitra tetap terjaga.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-[#000] text-md flex gap-2 items-start mt-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Etika dalam Setiap Keputusan
+            </h3>
+            <p>Setiap langkah yang kami ambil didasarkan pada nilai moral yang kuat, 
+              menciptakan bisnis yang adil dan bertanggung jawab.
+            </p>
+          </div>
+        </div>
+        
+        <div className="text-[#000] text-md flex gap-2 items-start my-3">
+          <h2 className="text-lg">•</h2>
+          <div>  
+            <h3 className="font-semibold mt-2 my-1">
+            Membangun Kepercayaan Jangka Panjang
+            </h3>
+            <p>Dengan integritas sebagai fondasi, 
+              kami berkomitmen membangun hubungan yang kokoh dan saling menguntungkan dengan semua pemangku kepentingan
+            </p>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

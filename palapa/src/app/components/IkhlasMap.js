@@ -6,7 +6,7 @@ import ModalHarmonis from "./ModalHarmonis";
 import ModalAdaptif from "./ModalAdaptif";
 import ModalLoyalitas from "./ModalLoyalitas";
 
-import { RiShieldCheckLine, RiAwardFill, RiTeamLine, RiHandHeartLine, RiEqualizerLine } from "react-icons/ri";
+import { RiShieldCheckLine, RiAwardFill, RiTeamLine, RiHandHeartLine, RiEqualizerLine, RiExchangeFill } from "react-icons/ri";
 
 export default function IkhlasDisplay() {
   const words = [
@@ -15,7 +15,7 @@ export default function IkhlasDisplay() {
     { letter: "H", text: "HARMONIS", image: <RiTeamLine/> },
     { letter: "L", text: "LOYALITAS", image: <RiHandHeartLine/> },
     { letter: "A", text: "ADAPTIF", image: <RiEqualizerLine/> },
-    { letter: "S", text: "SINERGI", image: <RiShieldCheckLine/> },
+    { letter: "S", text: "SINERGI", image: <RiExchangeFill/> },
   ];
 
   const [activeModal, setActiveModal] = useState(null);

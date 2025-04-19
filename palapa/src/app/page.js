@@ -72,15 +72,15 @@ export default function Home() {
 
           <h1 className="
           px-0 md:px-6 lg:px-10 xl:px-10 
-          font-bold text-[#3D3D3D] text-700 text-xl sm:text-xl md:text-5xl
-          w-4/5 md:w-1/2
+          font-semibold text-[#3D3D3D] text-700 text-xl sm:text-xl md:text-4xl lg:text-5xl md:text-center
+          w-4/5 md:w-3/4 xl:w-1/2
           md:mx-auto
           ">
             Sarana Telekomunikasi Legal Pemasyarakatan
           </h1>
           <p className="font-normal 
           text-sm md:text-md text-left md:text-center text-[#3D3D3D]
-          w-full md:w-3/5 
+          w-full md:w-4/5 lg:w-3/4 xl:w-3/5 2xl:w-1/2
           mt-5 mx-auto
           ">
             PT. Palapa Teknologi Indonesia didirikan secara resmi pada 26 September 2005 dan bergerak di bidang
@@ -93,7 +93,7 @@ export default function Home() {
               className="
               bg-[#186CE1] text-white font-normal text-center text-sm
               mt-5 md:mt-0
-              px-6 py-3 md:px-8 md:py-2
+              px-6 py-3 md:px-8 md:py-3 lg:py-2
               w-fit
               mx-auto
               rounded-xl
@@ -136,7 +136,7 @@ export default function Home() {
           flex justify-center align-center mt-10
           ">
             {/* Img */}
-            <div className="hidden md:flex w-96 h-106 mx-10 relative">
+            <div className="hidden md:flex w-full lg:w-80 h-106 mx-10 lg:mx-20 relative">
               <Image 
                 src={Stories} 
                 alt="Palapa" 
@@ -145,16 +145,16 @@ export default function Home() {
               />
             </div>
             {/* Lists */}
-            <div className="space-y-6 max-w-lg mx-4 md:mx-0">
+            <div className="space-y-6 max-w-lg mx-4 md:mr-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="w-18 h-18 p-2 md:p-0 md:w-14 md:h-8 bg-[#E7F0FD] rounded-full flex items-center justify-center text-center">
+                <div className="w-18 h-18 p-2 md:p-0 md:w-20 lg:w-14 md:h-8 lg:h-8 bg-[#E7F0FD] rounded-full flex items-center justify-center text-center">
                   <FaCheckCircle className="text-blue-500 text-lg md:text-xl" />
                 </div>
 
               <div>
               <h3 className="font-bold text-lg text-[#3D3D3D]">{feature.title}</h3>
-              <p className="my-2 md:my-0 font-normal text-sm text-[#3D3D3D]">{feature.description}</p>
+              <p className="my-2 md:my-0 font-normal text-sm md:text-xs text-[#3D3D3D]">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -233,7 +233,7 @@ export default function Home() {
       </div>
 
       {/* CONTACT US */}
-      <div className="md:hidden mb-20">
+      <div id="contact-us" className="md:hidden mb-20">
         <div className="relative w-[90%] mx-auto">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6196948688334!2d106.89035037418397!3d-6.31358696178271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69edfe6ea481f9%3A0xd2ded6731b79fb6!2sGRAHA%20PASOPATI%20NUSANTARA!5e0!3m2!1sid!2sid!4v1741107375046!5m2!1sid!2sid"
           loading="lazy" 

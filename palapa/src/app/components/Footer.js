@@ -3,7 +3,7 @@ import { RiGlobalLine } from "react-icons/ri";
 export default function Footer() {
   return (
     <footer className="bg-[#FAFAFA]">
-      <div className="md:flex items-center px-8 md:px-16 py-8 text-[#757575] text-xs font-normal">
+      <div className="md:flex items-center px-8 lg:px-16 py-8 text-[#757575] text-xs font-normal">
         <div className="flex items-center gap-2 flex-1">
           <RiGlobalLine className="w-4 h-4" />
           <h2 className="font-medium">Indonesia</h2>

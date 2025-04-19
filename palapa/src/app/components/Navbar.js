@@ -12,20 +12,20 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Desktop */}
-      <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-20 py-2 xl:py-1 bg-white hidden md:flex">
+      <nav className="fixed top-0 z-50 w-full flex justify-between items-center px-10 lg:px-20 py-2 xl:py-1 bg-white hidden md:flex">
         {/* Logo */}
         <div className="text-md font-bold flex items-center">
           <Image src={Logo} className="navLogo" width={100} height={100} alt="Palapa" />
         </div>
 
         {/* Navbar Links */}
-        <div className="flex items-center space-x-8 font-normal text-xs">
+        <div className="flex items-center space-x-4 lg:space-x-8 font-normal text-[10px] lg:text-xs">
           <Link
             href="/"
             className={`
               text-[#616161] text-center
               py-2 
-              px-6 
+              px-4 lg:px-6 
               rounded-tl-[30px] 
               rounded-tr-[10px] 
               rounded-bl-[10px] 
@@ -42,7 +42,7 @@ const Navbar = () => {
             className={`
               text-[#616161] text-center 
               py-2 
-              px-6 
+              px-4 lg:px-6 
               rounded-tl-[30px] 
               rounded-tr-[10px] 
               rounded-bl-[10px] 
@@ -60,7 +60,7 @@ const Navbar = () => {
             className={`
               text-[#616161] text-center 
               py-2 
-              px-6 
+              px-4 lg:px-6 
               rounded-tl-[30px] 
               rounded-tr-[10px] 
               rounded-bl-[10px] 
@@ -78,7 +78,7 @@ const Navbar = () => {
             className={`
               text-[#616161] text-center 
               py-2 
-              px-6 
+              px-4 lg:px-6 
               rounded-tl-[30px] 
               rounded-tr-[10px] 
               rounded-bl-[10px] 
@@ -129,13 +129,13 @@ const Navbar = () => {
           <span className="text-xs">Produk</span>
         </a>
         
-        <a
-          href="/contact"
+        <Link
+          href="/#contact-us"
           className={`flex flex-col items-center text-gray-600`}
         >
           <FiPhone className="text-2xl" />
           <span className="text-xs">Hubungi</span>
-        </a>
+        </Link>
       </nav>
     </>
   );
