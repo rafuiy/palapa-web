@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 
 import { FaCheckCircle } from 'react-icons/fa';
-import Stories from "./assets/Stories-img.png";
+import Stories from "./assets/ImageUnggul.jpg";
 import Client_Kementrian from "./assets/Client-1.png"
 import Client_Lapas from "./assets/Client-2.png"
 import IkhlasDisplay from "./components/IkhlasMap";

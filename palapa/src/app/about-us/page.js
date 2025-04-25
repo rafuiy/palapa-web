@@ -4,14 +4,14 @@ import Footer from "../components/Footer";
 import IkhlasDisplay from "../components/IkhlasMap";
 
 import Image from "next/image";
-import About1 from "../assets/About-1.png";
-import About2 from "../assets/About-2.png";
+import About1 from "../assets/ImageUs1.jpg";
+import About2 from "../assets/ImageUs4.jpg";
 
-import Partner1 from "../assets/Partner1.png";
-import Partner2 from "../assets/Partner2.png";
-import Partner3 from "../assets/Partner3.png";
-import Partner4 from "../assets/Partner4.png";
-import Partner5 from "../assets/Partner5.png";
+import Partner1 from "../assets/ImageUs2.jpg";
+import Partner2 from "../assets/ImageUs3.jpg";
+import Partner3 from "../assets/ImageUs5.jpg";
+import Partner4 from "../assets/ImageUs7.jpg";
+import Partner5 from "../assets/ImageUs6.jpg";
 
 import { RiRocket2Line, RiFocus2Line, RiCheckboxCircleFill } from "react-icons/ri";
 
@@ -101,7 +101,7 @@ export default function AboutUs() {
                 <Image src={About2} alt="About 2" fill className="object-cover  rounded-xl" />
               </div>
               <div className="md:hidden relative w-full md:w-[300] lg:w-[365px] h-[150px] object-cover object-bottom rounded-xl overflow-hidden shadow-md">
-                <Image src={About1} alt="About 2" fill className=" object bottom rounded-xl" />
+                <Image src={About1} alt="About 2" fill className=" object-cover rounded-xl" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-lg md:text-sm lg:text-xl font-semibold text-[#3D3D3D] border-l-2 border-blue-500 pl-2">
@@ -165,7 +165,7 @@ export default function AboutUs() {
                 <Image src={Partner1} alt="Partner 1" fill className="object-cover rounded-xl" />
               </div>
 
-              <div className="flex flex-col md:flex-row gap-6 ">
+              <div className="flex flex-col md:flex-row gap-3 ">
                 <div className="relative w-[150px] h-[570px] md:w-[90px] md:h-[150px] lg:w-[120px] lg:h-[150px] rounded-xl overflow-hidden shadow-md">
                   <Image src={Partner2} alt="Partner 2" fill className="object-cover rounded-xl" />
                 </div>
